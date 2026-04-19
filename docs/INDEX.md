@@ -5,6 +5,10 @@ This folder gathers the reference documents for the v2.4 portfolio base.
 ## Included
 
 - [Portfolio Recrutement Standard](portfolio_recrutement_standard.md)
+- [Analyse Marché et Positionnement 2026](analyse_marche_positionnement_2026.md)
+- [Analyse Axe Alternance RNCP 7 IA 2026](analyse_alternance_rncp7_ia_2026.md)
+- [Analyse Axe Freelance et Contrat 2026](analyse_freelance_contrat_2026.md)
+- [Plan CV et Portfolio 2026](plan_cv_portfolio_2026.md)
 - [Interface Audit 2026](interface_audit_2026.md)
 
 ## Launcher References
