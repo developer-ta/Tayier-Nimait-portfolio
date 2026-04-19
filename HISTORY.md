@@ -10,8 +10,8 @@ Ce document sert de fil d'Ariane pour suivre l'évolution architecturale et visu
 | **1.5** | Archivée | HTML | Portfolio Page d'accueil et Page 2. Correction 1.5. |
 | **2.1** | Archivée | ZIP | Évolution vers une structure plus modulaire (`bio-inspired-portfolio 2.1`). |
 | **2.2** | Archivée | ZIP | Amélioration de l'UI et des patterns techniques (`bio-inspired-portfolio2.2`). |
-| **2.3** | **Actuelle** | Repo Git | Version stable actuelle avec Clean Architecture (`application/`, `domain/`, `infrastructure/`, `presentation/`). |
-| **2.4** | Futur / Draft | HTML | Draft d'accueil trouvé dans le répertoire parent (`Version 2.4.html`). |
+| **2.3** | Archivée | Repo Git | Version stable précédente avec Clean Architecture (`application/`, `domain/`, `infrastructure/`, `presentation/`). |
+| **2.4** | **Actuelle** | Repo Git | Nouvelle base séparée orientée recrutement, React statique et déploiement gratuit. |
 
 ## Organisation du Répertoire
 
@@ -21,9 +21,9 @@ Ce document sert de fil d'Ariane pour suivre l'évolution architecturale et visu
 
 ## Stratégie de Gestion (Recommandations)
 
-1. **Git pour la 2.3+** : Toutes les modifications actuelles sont suivies via Git. Utiliser `git tag v2.x` pour marquer les étapes importantes.
+1. **Git pour la 2.4** : Toutes les modifications actuelles sont suivies via Git dans ce repo séparé. Utiliser `git tag v2.x` pour marquer les étapes importantes.
 2. **Snapshots Manuels** : Si une évolution majeure via l'IA est tentée, créer un commit avec le message `[IA-SNAPSHOT] Avant refactor X`.
 3. **Répertoire Historique** : Déplacer les documents d'analyse générés par l'IA dans `/historique` pour garder une trace de la réflexion (Prompt Pipeline).
 
 ---
-*Dernière mise à jour : 4 Avril 2026*
+*Dernière mise à jour : 19 Avril 2026*
