@@ -161,5 +161,64 @@
     "email": "ntparis9@gmail.com",
     "github": "https://github.com/developer-ta",
     "linkedin": "https://www.linkedin.com/in/tayier-dev-ai-data/"
+  },
+  "about": {
+    "intro": "Je construis des outils utiles pour automatiser, structurer et accélérer le travail des équipes.",
+    "background": "Mon parcours combine informatique, médecine et conception logicielle. J'ai appris à travailler vite sans perdre la rigueur.",
+    "approach": "Je privilégie les solutions simples, documentées et orientées résultat. L'IA est un accélérateur, pas un slogan.",
+    "lookingFor": "Je cherche des missions, un contrat ou une alternance IA où je peux être utile rapidement."
+  },
+  "cv": {
+    "title": "CV / Parcours",
+    "intro": "Une vue condensée de mon arsenal technique, de mon expérience et de ma formation.",
+    "summary": "Je mets en avant la combinaison entre IA, automatisation et produit utile. L'objectif est simple: livrer des systèmes clairs, fiables et mesurables.",
+    "skillFocus": [
+      {
+        "title": "IA & Machine Learning",
+        "description": "Deep learning, LLM, orchestration et intégration de briques IA dans des produits concrets.",
+        "highlight": "Orchestration IA"
+      },
+      {
+        "title": "Python & Data",
+        "description": "Pipelines, traitement de données, automatisation métier et structuration d’outils internes.",
+        "highlight": "Python Core"
+      },
+      {
+        "title": "Automatisation",
+        "description": "Workflows multi-étapes, réduction des tâches répétitives et intégration dans les process métier.",
+        "highlight": "Workflow Design"
+      },
+      {
+        "title": "Produit & Interface",
+        "description": "Dashboards, interfaces lisibles et mise en scène claire de la valeur technique.",
+        "highlight": "Clarté visuelle"
+      }
+    ],
+    "experience": [
+      {
+        "period": "Présent",
+        "role": "AI Automation Developer",
+        "company": "SNORBIK Labs",
+        "summary": "Conception de systèmes d’automatisation et de prototypes IA orientés efficacité opérationnelle."
+      },
+      {
+        "period": "2025",
+        "role": "Développeur IA & Automatisation",
+        "company": "Portfolio personnel",
+        "summary": "Création d’un portfolio axé recrutement, avec valorisation de projets, de compétences et de cas d’usage."
+      }
+    ],
+    "education": [
+      {
+        "title": "Expert IA - RNCP 7",
+        "subtitle": "Spécialisation réseaux de neurones",
+        "summary": "Formation orientée architectures avancées, IA appliquée et mise en pratique des systèmes intelligents."
+      },
+      {
+        "title": "Parcours pluridisciplinaire",
+        "subtitle": "Médecine + informatique",
+        "summary": "Un socle de rigueur analytique, d’organisation et de sens des responsabilités appliqué à la tech."
+      }
+    ]
   }
 }

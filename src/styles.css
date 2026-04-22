@@ -45,10 +45,23 @@ button {
   min-height: 100vh;
 }
 
+.app-shell {
+  min-height: 100vh;
+}
+
 .page-shell {
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
   padding: 24px 0 48px;
+}
+
+.page-transition {
+  animation: pageFade 240ms ease both;
+}
+
+.page-content {
+  display: grid;
+  gap: 22px;
 }
 
 .hero,
@@ -65,6 +78,13 @@ button {
   padding: 28px;
   position: relative;
   overflow: hidden;
+}
+
+.page-header {
+  position: sticky;
+  top: 16px;
+  z-index: 20;
+  margin-bottom: 18px;
 }
 
 .hero::before {
@@ -148,6 +168,50 @@ button {
   background: var(--accent);
 }
 
+.nav-button,
+.footer-link-button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 600;
+}
+
+.nav-button {
+  padding: 12px 0;
+  opacity: 0.86;
+  position: relative;
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.nav-button--active::after,
+.nav-button:hover::after {
+  background: var(--accent);
+}
+
+.footer-link-button {
+  width: fit-content;
+  text-align: left;
+  color: var(--muted);
+}
+
+.footer-link-button:hover {
+  color: var(--text);
+}
+
 .hero__cta-top {
   justify-self: end;
 }
@@ -175,6 +239,10 @@ button {
   gap: 24px;
   align-items: center;
   margin-top: 18px;
+}
+
+.hero__grid--single {
+  grid-template-columns: 1fr;
 }
 
 .hero h1,
@@ -612,6 +680,45 @@ button {
   align-items: stretch;
 }
 
+.about-grid,
+.contact-list {
+  display: grid;
+  gap: 16px;
+}
+
+.about-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-card,
+.contact-card {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--card-strong);
+  padding: 20px;
+}
+
+.about-card span,
+.contact-card span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.74rem;
+}
+
+.contact-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 8px;
+}
+
+.contact-card a {
+  color: var(--text);
+  font-weight: 700;
+  word-break: break-word;
+}
+
 .mission-grid {
   margin-top: 18px;
 }
@@ -675,6 +782,58 @@ button {
   border-radius: 999px;
 }
 
+.cv-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cv-focus-card,
+.cv-timeline__item,
+.cv-education__item {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--card-strong);
+  padding: 20px;
+}
+
+.cv-focus-card strong,
+.cv-timeline__item strong,
+.cv-education__item strong {
+  display: block;
+  margin: 10px 0 8px;
+  font-size: 1.15rem;
+}
+
+.cv-focus-card__tag {
+  display: inline-flex;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.cv-timeline,
+.cv-education {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.cv-timeline__item span,
+.cv-education__item span {
+  display: inline-block;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
 .contact-band {
   display: flex;
   justify-content: space-between;
@@ -734,6 +893,12 @@ button {
   color: var(--muted);
 }
 
+@media (min-width: 921px) {
+  .page-hero--compact .hero__copy {
+    max-width: 760px;
+  }
+}
+
 @media (max-width: 920px) {
   .hero__topline,
   .hero__grid,
@@ -781,6 +946,12 @@ button {
   .contact-band__links {
     justify-content: flex-start;
   }
+
+  .about-grid,
+  .contact-list,
+  .cv-focus-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -817,6 +988,10 @@ button {
   .dashboard-shell {
     min-height: auto;
   }
+
+  .page-header {
+    top: 10px;
+  }
 }
 
 .reveal {
@@ -827,6 +1002,17 @@ button {
   from {
     opacity: 0;
     transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
