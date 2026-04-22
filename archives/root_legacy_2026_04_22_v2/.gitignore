@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+*.log
+coverage/
+vite.svg
+source/
+docs/analyse_marche_positionnement_2026.md
+docs/analyse_alternance_rncp7_ia_2026.md
+docs/analyse_freelance_contrat_2026.md
+docs/plan_cv_portfolio_2026.md
+Lab/
+Prompt ingénierie/

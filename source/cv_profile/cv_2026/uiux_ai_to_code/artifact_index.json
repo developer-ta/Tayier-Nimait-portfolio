@@ -1,0 +1,61 @@
+{
+  "archive": "uiux_ai_to_code",
+  "purpose": "Index of the Solena UI/UX to code discussion and generated artifacts",
+  "contains": [
+    {
+      "path": "conversation_archive.md",
+      "role": "Conversation memory",
+      "description": "Summarizes the dashboard design discussion and the rationale behind the image-first workflow."
+    },
+    {
+      "path": "article_ui_ux_ai_to_code.md",
+      "role": "Methodology article",
+      "description": "A detailed article describing the Figma-quality dashboard pipeline."
+    },
+    {
+      "path": "README.md",
+      "role": "Folder overview",
+      "description": "Explains the purpose of the archive."
+    },
+    {
+      "path": "prompt_4_article_publication.json",
+      "role": "Publication prompt",
+      "description": "Archived prompt for turning the discussion into a publication-ready article."
+    },
+    {
+      "path": "prompt_5_figma_dashboard.json",
+      "role": "Dashboard design prompt",
+      "description": "Archived prompt for the Figma-quality dashboard image with sidebar direction."
+    },
+    {
+      "path": "prompt_6_figma_to_code.json",
+      "role": "Figma-to-code prompt",
+      "description": "Archived prompt for converting the approved dashboard image into code constraints."
+    },
+    {
+      "path": "prompts/",
+      "role": "Prompt chain archive",
+      "description": "Historical copies of the prompt sequence used by the UI/UX to code pipeline."
+    },
+    {
+      "path": "user_workflow_design_protocol.md",
+      "role": "Workflow audit note",
+      "description": "Documents the rule that workflow analysis must come before design image generation."
+    },
+    {
+      "path": "nouvelle_ressource/",
+      "role": "New source bundle",
+      "description": "Keeps the latest combined resource for profile, billing project, and UI/UX method notes."
+    }
+  ],
+  "linked_artifacts": [
+    "private-core/docs/figma_dashboard_pipeline.md",
+    "private-core/version_current/prompts/prompt_5_figma_dashboard.json",
+    "private-core/version_current/prompts/prompt_6_figma_to_code.json",
+    "private-core/version_current/prompts/prompt_7_ui_implementation.json",
+    "desktop_app/main.py",
+    "app_launcher/1_CLIC_DEMARRER_SOLENA.py",
+    "private-core/sources/uiux_ai_to_code/user_workflow_design_protocol.md",
+    "private-core/sources/uiux_ai_to_code/nouvelle_ressource/README.md"
+  ]
+}

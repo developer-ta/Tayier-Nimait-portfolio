@@ -1,0 +1,552 @@
+<!doctype html>
+
+<html class="dark" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tayier NIMAIT | Développeur IA &amp; Automatisation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'secondary-fixed': '#acedff',
+              background: '#0d1322',
+              'outline-variant': '#584237',
+              'on-background': '#dde2f8',
+              'on-tertiary-fixed-variant': '#6700b5',
+              'tertiary-fixed': '#efdbff',
+              'on-tertiary-fixed': '#2c0051',
+              'on-tertiary': '#480081',
+              outline: '#a78b7d',
+              'surface-dim': '#0d1322',
+              'surface-bright': '#33394a',
+              'on-secondary-container': '#00424e',
+              'inverse-on-surface': '#2a3040',
+              'surface-container-high': '#242a3a',
+              'on-primary-fixed-variant': '#783200',
+              'inverse-surface': '#dde2f8',
+              'surface-container-highest': '#2f3445',
+              'on-secondary-fixed-variant': '#004e5c',
+              error: '#ffb4ab',
+              secondary: '#06B6D4',
+              'on-primary-fixed': '#341100',
+              'error-container': '#93000a',
+              'tertiary-fixed-dim': '#dcb8ff',
+              'surface-container-lowest': '#080e1d',
+              'surface-container-low': '#151b2b',
+              primary: '#F97316',
+              'surface-tint': '#ffb690',
+              'inverse-primary': '#9d4300',
+              'primary-fixed-dim': '#ffb690',
+              surface: '#0d1322',
+              'secondary-fixed-dim': '#4cd7f6',
+              'primary-container': '#F97316',
+              'surface-variant': '#2f3445',
+              'on-surface': '#dde2f8',
+              'on-primary-container': '#582200',
+              'on-error': '#690005',
+              'surface-container': '#191f2f',
+              'on-secondary-fixed': '#001f26',
+              'tertiary-container': '#bc7cff',
+              tertiary: '#dcb8ff',
+              'secondary-container': '#03b5d3',
+              'on-error-container': '#ffdad6',
+              'on-surface-variant': '#e0c0b1',
+              'on-tertiary-container': '#4b0085',
+              'on-primary': '#552100',
+              'primary-fixed': '#ffdbca',
+              'on-secondary': '#003640',
+            },
+            fontFamily: {
+              headline: ['Epilogue'],
+              body: ['Manrope'],
+              label: ['Manrope'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .morph-outset {
+        box-shadow:
+          6px 6px 12px rgba(0, 0, 0, 0.4),
+          -4px -4px 12px rgba(255, 255, 255, 0.02);
+      }
+      .morph-inset {
+        box-shadow:
+          inset 4px 4px 8px rgba(0, 0, 0, 0.5),
+          inset -2px -2px 8px rgba(255, 255, 255, 0.01);
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-background font-body selection:bg-primary/30">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#0d1322]/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/5"
+    >
+      <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter text-white uppercase font-headline">
+          Snorbik
+        </div>
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            class="text-slate-400 hover:text-white transition-colors font-['Epilogue'] tracking-tight"
+            href="#experience"
+            >Expérience</a
+          >
+          <a
+            class="text-orange-500 font-semibold border-b-2 border-orange-500 pb-1 font-['Epilogue'] tracking-tight"
+            href="#projets"
+            >Projets</a
+          >
+          <a
+            class="text-slate-400 hover:text-white transition-colors font-['Epilogue'] tracking-tight"
+            href="#competences"
+            >Compétences</a
+          >
+          <a
+            class="text-slate-400 hover:text-white transition-colors font-['Epilogue'] tracking-tight"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="material-symbols-outlined text-slate-400 hover:bg-white/5 p-2 rounded-lg transition-all"
+          >
+            terminal
+          </button>
+          <button
+            class="bg-primary-container text-on-primary-container px-6 py-2 rounded-xl font-bold hover:scale-95 duration-200 transition-all morph-outset"
+          >
+            Télécharger CV
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+      <!-- Hero Section -->
+      <header class="mb-24 flex flex-col md:flex-row items-end justify-between gap-12">
+        <div class="max-w-2xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high border border-white/5 mb-6"
+          >
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span class="text-xs font-label uppercase tracking-widest text-primary"
+              >Disponible pour nouveaux défis</span
+            >
+          </div>
+          <h1
+            class="text-6xl md:text-8xl font-black font-headline tracking-tighter leading-none mb-6"
+          >
+            Tayier <span class="text-primary">NIMAIT</span>
+          </h1>
+          <p class="text-2xl font-headline text-slate-400 mb-8 max-w-xl">
+            Mon Parcours Expert en
+            <span class="text-white">Développement IA &amp; Automatisation</span> au sein de
+            l'Atelier Snorbik.
+          </p>
+          <div
+            class="flex flex-wrap gap-6 text-sm font-label text-slate-500 uppercase tracking-widest"
+          >
+            <div class="flex items-center gap-2">
+              <span
+                class="material-symbols-outlined text-primary"
+                style="font-variation-settings: 'FILL' 1"
+                >location_on</span
+              >
+              Paris, France
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="material-symbols-outlined text-primary"
+                style="font-variation-settings: 'FILL' 1"
+                >mail</span
+              >
+              contact@snorbik.ai
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="material-symbols-outlined text-primary"
+                style="font-variation-settings: 'FILL' 1"
+                >terminal</span
+              >
+              @snorbik_dev
+            </div>
+          </div>
+        </div>
+        <!-- Profile Accent -->
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-primary/20 blur-3xl group-hover:bg-primary/30 transition-all duration-500"
+          ></div>
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden morph-outset border border-white/5"
+          >
+            <img
+              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              data-alt="Professional portrait of a tech expert in a dark studio setting with subtle orange ambient rim lighting"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-hki1iYBQA8hMrWTGKCukTgya3owvVY8k4bXKkkypJTrgmWpyuOrdiFyJ6LnY02EqXw_XUOboMfi1Joeiw-hOb5E1fHJPVLmKMXyEy3NejccPsI3uLw8nZgfRwkEM_Q6p1B9HeI6iOBG_ok8z2t2KjlSpaYVHOo18FOV1UcgILBX21wvXs0W87dHSFwLt7eilHFAX06Y_jwxNVYEkOhvmiddHvAY7wgNEq1uLlrGA5uNn-VtQeCKx9I4M5OXGxp9NtmkW5aA_yv0"
+            />
+          </div>
+        </div>
+      </header>
+      <!-- Certification Ribbon -->
+      <section class="mb-32">
+        <div
+          class="bg-surface-container-low rounded-3xl p-8 md:p-12 morph-inset border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8"
+        >
+          <div class="flex items-center gap-6">
+            <div
+              class="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center text-primary"
+            >
+              <span
+                class="material-symbols-outlined text-5xl"
+                style="font-variation-settings: 'FILL' 1"
+                >verified_user</span
+              >
+            </div>
+            <div>
+              <h3 class="text-2xl font-headline font-bold text-white uppercase tracking-tight">
+                RNCP 7 Expert en IA
+              </h3>
+              <p class="text-slate-400 font-body">
+                Certification d'excellence en Architecture et Ingénierie des systèmes d'Intelligence
+                Artificielle.
+              </p>
+            </div>
+          </div>
+          <div class="h-px md:h-12 w-full md:w-px bg-white/10"></div>
+          <div class="flex gap-4">
+            <span
+              class="px-4 py-2 bg-surface-container-highest rounded-xl text-xs font-bold text-secondary uppercase tracking-widest border border-secondary/20"
+              >Machine Learning</span
+            >
+            <span
+              class="px-4 py-2 bg-surface-container-highest rounded-xl text-xs font-bold text-secondary uppercase tracking-widest border border-secondary/20"
+              >Deep Learning</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Projets Section -->
+      <section class="mb-32" id="projets">
+        <div class="flex justify-between items-end mb-16">
+          <div>
+            <h2 class="text-xs font-label text-primary uppercase tracking-[0.3em] mb-4">
+              Portfolio
+            </h2>
+            <h3 class="text-4xl md:text-5xl font-black font-headline uppercase tracking-tighter">
+              Projets Majeurs
+            </h3>
+          </div>
+          <div class="hidden md:block h-px flex-1 bg-white/5 mx-12 mb-4"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="group bg-surface-container rounded-[2rem] p-8 morph-outset border border-white/5 hover:bg-surface-container-high transition-all duration-500"
+          >
+            <div class="flex justify-between items-start mb-8">
+              <span
+                class="material-symbols-outlined text-primary text-4xl"
+                style="font-variation-settings: 'FILL' 1"
+                >database</span
+              >
+              <span
+                class="text-[0.6rem] font-bold py-1 px-3 rounded-full bg-primary/20 text-primary uppercase tracking-widest"
+                >Optimisation</span
+              >
+            </div>
+            <h4
+              class="text-2xl font-headline font-extrabold mb-4 group-hover:text-primary transition-colors"
+            >
+              Automatisation de données commerciales
+            </h4>
+            <p class="text-slate-400 mb-8 line-clamp-3">
+              Mise en place de pipelines ETL robustes pour le traitement massif de flux
+              transactionnels. Performance accrue de 40% sur les temps d'ingestion.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >Pandas</span
+              >
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >FastAPI</span
+              >
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >Redis</span
+              >
+            </div>
+            <button
+              class="w-full py-4 bg-surface-container-lowest rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300"
+            >
+              Voir le rapport
+            </button>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="group bg-surface-container rounded-[2rem] p-8 morph-outset border border-white/5 hover:bg-surface-container-high transition-all duration-500"
+          >
+            <div class="flex justify-between items-start mb-8">
+              <span
+                class="material-symbols-outlined text-primary text-4xl"
+                style="font-variation-settings: 'FILL' 1"
+                >psychology</span
+              >
+              <span
+                class="text-[0.6rem] font-bold py-1 px-3 rounded-full bg-primary/20 text-primary uppercase tracking-widest"
+                >NLP / LLM</span
+              >
+            </div>
+            <h4
+              class="text-2xl font-headline font-extrabold mb-4 group-hover:text-primary transition-colors"
+            >
+              Assistant IA Intelligence Métier
+            </h4>
+            <p class="text-slate-400 mb-8 line-clamp-3">
+              Développement d'un agent conversationnel RAG (Retrieval Augmented Generation) capable
+              d'analyser et synthétiser des bases de connaissances internes complexes.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >LLM</span
+              >
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >Python</span
+              >
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >Pinecone</span
+              >
+            </div>
+            <button
+              class="w-full py-4 bg-surface-container-lowest rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300"
+            >
+              Démo technique
+            </button>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="group bg-surface-container rounded-[2rem] p-8 morph-outset border border-white/5 hover:bg-surface-container-high transition-all duration-500"
+          >
+            <div class="flex justify-between items-start mb-8">
+              <span
+                class="material-symbols-outlined text-primary text-4xl"
+                style="font-variation-settings: 'FILL' 1"
+                >monitoring</span
+              >
+              <span
+                class="text-[0.6rem] font-bold py-1 px-3 rounded-full bg-primary/20 text-primary uppercase tracking-widest"
+                >Analytics</span
+              >
+            </div>
+            <h4
+              class="text-2xl font-headline font-extrabold mb-4 group-hover:text-primary transition-colors"
+            >
+              Dashboard Performance IA
+            </h4>
+            <p class="text-slate-400 mb-8 line-clamp-3">
+              Interface de visualisation en temps réel monitorant la précision, la latence et les
+              coûts d'infrastructure des modèles déployés en production.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >React</span
+              >
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >SQL</span
+              >
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >D3.js</span
+              >
+            </div>
+            <button
+              class="w-full py-4 bg-surface-container-lowest rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300"
+            >
+              Consulter l'étude
+            </button>
+          </div>
+          <!-- Project 4 -->
+          <div
+            class="group bg-surface-container rounded-[2rem] p-8 morph-outset border border-white/5 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden"
+          >
+            <div class="absolute top-4 right-4 animate-pulse">
+              <span class="bg-secondary text-on-secondary text-[10px] font-black px-2 py-1 rounded"
+                >WORK IN PROGRESS</span
+              >
+            </div>
+            <div class="flex justify-between items-start mb-8">
+              <span
+                class="material-symbols-outlined text-primary text-4xl"
+                style="font-variation-settings: 'FILL' 1"
+                >hub</span
+              >
+            </div>
+            <h4
+              class="text-2xl font-headline font-extrabold mb-4 group-hover:text-primary transition-colors"
+            >
+              Agent IA Workflows
+            </h4>
+            <p class="text-slate-400 mb-8 line-clamp-3">
+              Création d'agents autonomes multi-étapes orchestrant des tâches complexes entre
+              plusieurs outils SaaS via LangChain et API OpenAI.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >OpenAI</span
+              >
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >LangChain</span
+              >
+              <span class="text-[10px] bg-background px-3 py-1 rounded-lg text-slate-300 font-mono"
+                >n8n</span
+              >
+            </div>
+            <button
+              class="w-full py-4 bg-surface-container-lowest rounded-xl font-bold uppercase text-xs tracking-widest opacity-50 cursor-not-allowed"
+            >
+              Prochainement
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Compétences Section -->
+      <section class="mb-32" id="competences">
+        <h2 class="text-center text-4xl font-black font-headline uppercase mb-16 tracking-tighter">
+          Arsenal Technique
+        </h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <!-- Skill 1 -->
+          <div
+            class="flex flex-col items-center justify-center p-8 bg-surface-container-low rounded-2xl morph-inset border border-white/5 hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              class="w-12 h-12 mb-4"
+              data-alt="Official Python logo with blue and yellow interlocking snakes, clean vector style"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT-OY2tTVwQUyzg2OJxKbY0zKgjSGFlTqNX2kpwef12VBnIxdAs8d61RluQq1fCYSID6Rb1srjN1XhDUFypjzupJe8CtNVPfdJSNXUdvhe5d16zxueXWElbXCgRSu1tjC5FX7wq_-c8atvHt2LCZ3-WtAEqHPevrS7u-nO29YEHsKe6xHYBo2zWOgFqJ9pd8wHxqdulfGn5RZYOau-vkidItkN7dR-1DKBXMyBqeWiif3-3I-zQCk41SFz1uWtFo17kKovjyCt6Nc"
+            />
+            <span class="font-bold text-sm tracking-widest uppercase text-white">Python</span>
+          </div>
+          <!-- Skill 2 -->
+          <div
+            class="flex flex-col items-center justify-center p-8 bg-surface-container-low rounded-2xl morph-inset border border-white/5 hover:scale-105 transition-transform duration-300"
+          >
+            <span
+              class="material-symbols-outlined text-secondary text-5xl mb-4"
+              style="font-variation-settings: 'FILL' 1"
+              >neurology</span
+            >
+            <span class="font-bold text-sm tracking-widest uppercase text-white text-center"
+              >IA Générative</span
+            >
+          </div>
+          <!-- Skill 3 -->
+          <div
+            class="flex flex-col items-center justify-center p-8 bg-surface-container-low rounded-2xl morph-inset border border-white/5 hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              class="w-12 h-12 mb-4"
+              data-alt="React.js logo, blue atomic structure, high-tech neon style"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuAubiNq_tihqWO1poIhz-6ovL2iXfI_LIpkIjRulGWxx5dctggR3KRv06xC8i0z25rlywurkBdCOtG8hzRKt8qrsj_05Eubaw6UCqrns7YgnS2g2qGW71Xy-KgfJ1L4e8POnmzzWQcOovZ0DJvDwMYKi-9vJnOmgVNujcsMdYy8mRq6OLTziKC4KbelMRY3rE50aycg_CL-209X-xZi17I-ygQS8Qago702SuE0omPkz7W0Z_gsagQB0ahdT5rx5ZRTRnTN--xyU"
+            />
+            <span class="font-bold text-sm tracking-widest uppercase text-white">React</span>
+          </div>
+          <!-- Skill 4 -->
+          <div
+            class="flex flex-col items-center justify-center p-8 bg-surface-container-low rounded-2xl morph-inset border border-white/5 hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              class="w-12 h-12 mb-4"
+              data-alt="Docker logo, blue whale with cargo containers, clean graphic"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3AFNFcD9scemUbX7Q8L1xCKboZTtQQq-q_eN-Nz_zOtm9aOt6B5CX8u9CFQAbEmioGl7Xj0CnospbWgMRBfa7na2g1dbqZfrCPtBk9wluyzJvXFHr0VFJgKtK-uNVFdLhCwufv90tg3sKDzGop8tC0eIDKNpmmT1hOMLC09N98CtKOG2galCYxmc4eCnWnTWyfrTWeJzZbqoTl6EorTu-BO_52mTfRsaRh0YHVvcAgV7oBpZzVOGIdWkAU_a1q623LTu_mu56BLQ"
+            />
+            <span class="font-bold text-sm tracking-widest uppercase text-white">Docker</span>
+          </div>
+          <!-- Skill 5 -->
+          <div
+            class="flex flex-col items-center justify-center p-8 bg-surface-container-low rounded-2xl morph-inset border border-white/5 hover:scale-105 transition-transform duration-300"
+          >
+            <span class="material-symbols-outlined text-slate-400 text-5xl mb-4">account_tree</span>
+            <span class="font-bold text-sm tracking-widest uppercase text-white text-center"
+              >Git / DevOps</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA -->
+      <section class="flex flex-col items-center text-center">
+        <div class="mb-12">
+          <h2 class="text-4xl md:text-5xl font-black font-headline uppercase mb-6 tracking-tighter">
+            Prêt pour la suite ?
+          </h2>
+          <p class="text-slate-400 text-lg max-w-xl mx-auto">
+            Explorez l'intégralité de mon parcours et mes certifications détaillées.
+          </p>
+        </div>
+        <button
+          class="group relative inline-flex items-center gap-4 bg-primary text-on-primary px-10 py-6 rounded-2xl font-black font-headline text-xl uppercase tracking-tighter transition-all hover:scale-95 morph-outset overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"
+          ></div>
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1"
+            >download_for_offline</span
+          >
+          Télécharger mon CV complet (PDF)
+        </button>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 border-t border-white/5 bg-[#0d1322]">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-6"
+      >
+        <div class="font-['Epilogue'] font-black text-orange-500 text-xl">Snorbik AI Atelier</div>
+        <div class="flex gap-8">
+          <a
+            class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors"
+            href="#"
+            >LinkedIn</a
+          >
+          <a
+            class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors"
+            href="#"
+            >GitHub</a
+          >
+          <a
+            class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors"
+            href="#"
+            >Twitter</a
+          >
+          <a
+            class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors"
+            href="#"
+            >Email</a
+          >
+        </div>
+        <div class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500">
+          © 2024 Snorbik AI Atelier. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

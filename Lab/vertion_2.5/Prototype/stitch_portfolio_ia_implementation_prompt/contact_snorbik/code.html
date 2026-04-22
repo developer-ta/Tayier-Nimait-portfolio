@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#efdbff",
+                        "on-tertiary": "#480081",
+                        "on-secondary-fixed": "#001f26",
+                        "secondary": "#4cd7f6",
+                        "on-tertiary-fixed-variant": "#6700b5",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-secondary": "#003640",
+                        "on-primary-fixed-variant": "#783200",
+                        "surface-container-low": "#151b2b",
+                        "surface-dim": "#0d1322",
+                        "on-background": "#dde2f8",
+                        "outline": "#a78b7d",
+                        "on-primary-fixed": "#341100",
+                        "on-tertiary-fixed": "#2c0051",
+                        "error": "#ffb4ab",
+                        "surface-container": "#191f2f",
+                        "inverse-surface": "#dde2f8",
+                        "outline-variant": "#584237",
+                        "primary-fixed": "#ffdbca",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#acedff",
+                        "primary-container": "#f97316",
+                        "inverse-on-surface": "#2a3040",
+                        "surface": "#0d1322",
+                        "on-surface": "#dde2f8",
+                        "inverse-primary": "#9d4300",
+                        "background": "#0d1322",
+                        "surface-container-highest": "#2f3445",
+                        "primary": "#ffb690",
+                        "on-primary-container": "#582200",
+                        "on-surface-variant": "#e0c0b1",
+                        "tertiary-container": "#bc7cff",
+                        "primary-fixed-dim": "#ffb690",
+                        "on-primary": "#552100",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#080e1d",
+                        "tertiary-fixed-dim": "#dcb8ff",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "tertiary": "#dcb8ff",
+                        "secondary-container": "#03b5d3",
+                        "surface-tint": "#ffb690",
+                        "surface-container-high": "#242a3a",
+                        "on-tertiary-container": "#4b0085",
+                        "on-secondary-container": "#00424e",
+                        "surface-variant": "#2f3445",
+                        "surface-bright": "#33394a",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .morph-card {
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.4), -4px -4px 12px rgba(255,255,255,0.02);
+        }
+        .morph-inset {
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.5), inset -2px -2px 8px rgba(255,255,255,0.02);
+        }
+        .morph-button {
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.4), -2px -2px 10px rgba(255,255,255,0.03);
+            transition: all 0.2s ease-in-out;
+        }
+        .morph-button:active {
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.4);
+            transform: scale(0.98);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+        .nav-glow {
+            text-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+        }
+        body {
+            background-color: #0d1322;
+            color: #dde2f8;
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0d1322]/60 backdrop-blur-xl border-b border-white/5">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<!-- Left Side: Brand Logo + Name/Title -->
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center rounded-lg shadow-lg group-hover:rotate-6 transition-transform">
+<span class="font-headline font-black text-on-primary-container text-xl">S</span>
+</div>
+<div class="hidden sm:block">
+<p class="font-headline font-black text-on-background tracking-tighter leading-tight uppercase">SNORBIK</p>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-[0.2em] leading-none">Tayier NIMAIT • AI &amp; Dev</p>
+</div>
+</div>
+<!-- Center: Navigation Links -->
+<div class="hidden lg:flex items-center space-x-8 font-manrope">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm font-bold uppercase tracking-widest" href="#">Accueil</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm font-bold uppercase tracking-widest" href="#">Projets</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm font-bold uppercase tracking-widest" href="#">Services</a>
+<a class="text-primary nav-glow font-black border-b-2 border-primary pb-1 text-sm uppercase tracking-widest" href="#">Contact</a>
+</div>
+<!-- Right Side: CV, Socials, Toggle, Profile -->
+<div class="flex items-center space-x-3">
+<button class="hidden md:flex items-center gap-2 px-4 py-2 bg-surface-container-highest/50 hover:bg-surface-container-highest text-on-background text-xs font-bold rounded-lg transition-all border border-white/10 uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">download</span>
+                CV
+            </button>
+<div class="hidden sm:flex items-center space-x-1">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-white/5 hover:text-primary transition-all">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-white/5 hover:text-primary transition-all">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.414-4.041-1.414-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</button>
+</div>
+<button class="w-9 h-9 flex items-center justify-center rounded-full bg-surface-container-low text-primary border border-white/5 morph-button">
+<span class="material-symbols-outlined text-xl">dark_mode</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary/30 p-0.5 ml-2">
+<div class="w-full h-full rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtX_876zU2B5tKq2Y-W0X7g-Y-Hk0Z_fC7W-S0X-N0-J0X-Y-Hk0Z_fC7W-S0X-N0"/>
+</div>
+</div>
+<button class="lg:hidden text-on-background ml-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-20">
+<div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 border-l-4 border-primary pl-8">
+<div class="max-w-2xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<span class="text-secondary font-label uppercase tracking-widest text-xs font-bold">Disponible pour de nouvelles missions</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-black leading-tight text-on-background tracking-tighter uppercase">
+                        Parlons de votre <span class="text-primary text-glow">besoin</span>
+</h1>
+</div>
+<p class="text-on-surface-variant max-w-sm font-body text-lg leading-relaxed">
+                    Vous avez un projet d'automatisation ou d'IA ? Discutons-en pour transformer vos idées en solutions concrètes et performantes.
+                </p>
+</div>
+</section>
+<!-- Main Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Side: Contact Information Cards -->
+<div class="lg:col-span-5 space-y-8 order-2 lg:order-1">
+<!-- Quick Contact Card -->
+<div class="morph-card bg-surface-container-high p-8 rounded-xl border-t border-white/5">
+<h3 class="font-headline text-xl mb-6 text-on-background">Coordonnées Directes</h3>
+<div class="space-y-6">
+<a class="flex items-center p-4 rounded-xl bg-surface-container-lowest morph-inset group hover:bg-surface-container-high transition-all" href="mailto:contact@snorbik.ai">
+<div class="h-12 w-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container mr-4">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">Email</p>
+<p class="text-on-surface font-semibold">contact@snorbik.ai</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center p-4 rounded-xl bg-surface-container-lowest morph-inset group hover:bg-surface-container-high transition-all" href="#">
+<div class="h-12 w-12 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container mr-4">
+<span class="material-symbols-outlined">link</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">LinkedIn</p>
+<p class="text-on-surface font-semibold">Tayier NIMAIT</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center p-4 rounded-xl bg-surface-container-lowest morph-inset group hover:bg-surface-container-high transition-all" href="#">
+<div class="h-12 w-12 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary-container mr-4">
+<span class="material-symbols-outlined">code</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest">GitHub</p>
+<p class="text-on-surface font-semibold">snorbik-dev</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Availability Badge / Decorative -->
+<div class="relative overflow-hidden morph-card bg-surface-container-low p-8 rounded-xl aspect-video md:aspect-auto flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale mix-blend-overlay" data-alt="Futuristic dark data center with orange and blue glowing cable lines atmospheric lighting high-tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvGa1p36IJo9dlHr-vIlG5iXWmNkOE9bS9oRnmt51V6zm5WQTO8SJYXSwOv-8qHwO8BtNb_tef8MfXDYV-xL1j5H72Hof8PNu7WmoVy5CJFOsG5iJsNQk-Iw2GA7zc3KCppOdqYzTY01O9nPslkNWQm6BnnpZeIForJPRdd4sOI81lkMh_sjFMocEP0LMPp-LIbLD1ZG-_ZozqRm61ejdDk2ZT1pxjd37PlWuPeFloGUjFgAAPY62qylTPsmIxLkFvMThtNApKJyI"/>
+<div class="relative z-10">
+<p class="text-3xl font-headline font-extrabold text-on-background mb-2">Prêt à démarrer ?</p>
+<p class="text-on-surface-variant font-body">Mes prochains créneaux sont ouverts à partir de la semaine prochaine.</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Neomorphic Contact Form -->
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="morph-card bg-surface-container p-8 md:p-12 rounded-xl relative">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-surface-container-highest text-8xl rotate-12 select-none">edit_note</span>
+</div>
+<form class="space-y-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-3">
+<label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant ml-2">Nom Complet</label>
+<input class="w-full bg-surface-container-lowest border-none morph-inset rounded-xl p-4 text-on-surface placeholder:text-surface-container-highest focus:ring-2 focus:ring-secondary/50 transition-all" placeholder="Alex Dupont" type="text"/>
+</div>
+<div class="space-y-3">
+<label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant ml-2">Adresse Email</label>
+<input class="w-full bg-surface-container-lowest border-none morph-inset rounded-xl p-4 text-on-surface placeholder:text-surface-container-highest focus:ring-2 focus:ring-secondary/50 transition-all" placeholder="alex@exemple.com" type="email"/>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant ml-2">Votre Message</label>
+<textarea class="w-full bg-surface-container-lowest border-none morph-inset rounded-xl p-4 text-on-surface placeholder:text-surface-container-highest focus:ring-2 focus:ring-secondary/50 transition-all resize-none" placeholder="Parlez-moi de votre projet, de vos objectifs et de vos contraintes..." rows="6"></textarea>
+</div>
+<button class="w-full md:w-auto px-12 py-5 bg-gradient-to-br from-primary-container to-orange-700 text-on-primary-container font-headline font-black text-xl uppercase tracking-tighter morph-button rounded-xl flex items-center justify-center gap-3" type="submit">
+                            Envoyer le message
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+<!-- Trust Section / Services Icons -->
+<section class="mt-32 pt-20 border-t border-white/5">
+<p class="text-center text-on-surface-variant uppercase tracking-widest font-bold text-xs mb-12">Expertise &amp; Solutions</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl">automation</span>
+<span class="font-headline text-sm">Automation</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+<span class="font-headline text-sm">AI Integration</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl">terminal</span>
+<span class="font-headline text-sm">Custom Dev</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-4xl">query_stats</span>
+<span class="font-headline text-sm">Data Viz</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-white/5 bg-[#0d1322]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+<div class="mb-6 md:mb-0">
+<span class="font-epilogue font-bold text-orange-500">SNORBIK</span>
+<p class="font-manrope text-sm tracking-wide text-slate-500 mt-2">© 2024 SNORBIK | AI &amp; Automation by Tayier NIMAIT</p>
+</div>
+<div class="flex space-x-8">
+<a class="text-slate-500 hover:text-orange-400 transition-all font-manrope text-sm tracking-wide" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-orange-400 transition-all font-manrope text-sm tracking-wide" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-orange-400 transition-all font-manrope text-sm tracking-wide" href="#">Email</a>
+<a class="text-slate-500 hover:text-orange-400 transition-all font-manrope text-sm tracking-wide" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,169 @@
+{
+  "system_instruction": "Act as a Senior Product Designer (Figma expert) AND Frontend Engineer. Generate a full-page portfolio UI that is clean, structured, and fully implementable (HTML/CSS/React/PySide6). The design must look like a real SaaS/product landing page, not a personal resume.",
+
+  "core_goal": {
+    "objective": "Create a portfolio that SELLS products/services, not just presents a profile",
+    "target": "Clients, startups, companies looking for AI solutions",
+    "rule": "Everything must communicate VALUE and RESULTS"
+  },
+
+  "profile_context": {
+    "role": "AI Developer & Product Builder",
+    "skills": ["Python", "React", ".NET", "AI automation", "Data & Visualization"],
+    "positioning": "I build intelligent tools and SaaS products that automate workflows and create business value"
+  },
+
+  "ui_configuration": {
+    "page_type": "PORTFOLIO HOME PAGE (Product-oriented)",
+    "raw_user_idea": "AI Developer portfolio focused on showcasing tools, SaaS ideas, automation systems, and real use cases"
+  },
+
+  "design_rules": {
+    "figma_compatibility": true,
+    "layout": "Flexbox-first",
+    "spacing": "8pt system",
+    "alignment": "perfect",
+    "no_artistic_noise": true
+  },
+
+  "visual_constraints": {
+    "allowed": [
+      "Clean layout",
+      "Soft shadows",
+      "Light gradients",
+      "Simple icons",
+      "Cards UI"
+    ],
+    "forbidden": [
+      "Textures",
+      "3D scenes",
+      "Glow overload",
+      "Decorative backgrounds",
+      "Abstract visuals"
+    ]
+  },
+
+  "inspect_mode": {
+    "enabled": true,
+    "section_label": "[SECTION: NAME]",
+    "component_label": "[COMP: NAME]",
+    "style": "small, subtle, top-left"
+  },
+
+  "page_structure": {
+
+    "HEADER": {
+      "components": [
+        "Logo (name or brand)",
+        "Nav: Home / Products / About / Contact",
+        "CTA: Work with me"
+      ]
+    },
+
+    "HERO": {
+      "goal": "positioning + value",
+      "components": [
+        "Headline: I build AI-powered tools that solve real problems",
+        "Subheadline",
+        "Primary CTA: View Products",
+        "Secondary CTA: Contact",
+        "Simple visual (diagram / dashboard preview)"
+      ]
+    },
+
+    "VALUE_SECTION": {
+      "goal": "what you bring",
+      "components": [
+        "3-4 cards",
+        "Automation",
+        "AI Integration",
+        "Data Tools",
+        "SaaS Development"
+      ]
+    },
+
+    "PRODUCTS_SECTION": {
+      "goal": "SELL",
+      "components": [
+        "Product cards",
+        "Each card includes:",
+        "- Problem",
+        "- Solution",
+        "- Tech",
+        "- CTA: View / Try"
+      ]
+    },
+
+    "HOW_IT_WORKS": {
+      "goal": "process clarity",
+      "components": [
+        "Step 1: Analyze",
+        "Step 2: Build",
+        "Step 3: Automate",
+        "Step 4: Deploy"
+      ]
+    },
+
+    "TRUST_SECTION": {
+      "goal": "credibility",
+      "components": [
+        "Projects done",
+        "Technologies used",
+        "Optional testimonials"
+      ]
+    },
+
+    "CONTACT_SECTION": {
+      "components": [
+        "Simple form",
+        "CTA: Let's build something"
+      ]
+    },
+
+    "FOOTER": {
+      "components": [
+        "Links",
+        "Copyright",
+        "Social"
+      ]
+    }
+  },
+
+  "rendering_constraints": {
+    "format": "single tall vertical image",
+    "style": "Figma UI",
+    "no_artifacts": true,
+    "clean_layout": true
+  },
+
+  "interactive_next_step": {
+    "questions": [
+      "1. Convert this design into React or PySide6?",
+      "2. Improve product positioning?",
+      "3. Generate a detailed PRODUCT page?",
+      "4. Create SaaS landing page version?"
+    ]
+  },
+
+  "market_adaptation": {
+  "target_market": "France / Paris",
+  "rule": "Design must appeal to recruiters and companies, not only startup founders",
+
+  "mandatory_sections": [
+    "Real Use Cases",
+    "Technical Stack",
+    "Mission Readiness",
+    "Concrete Results"
+  ],
+
+  "tone": "Professional, clear, structured (less hype, more clarity)",
+
+  "avoid": [
+    "Too much marketing language",
+    "Abstract AI concepts",
+    "Startup-only positioning"
+  ],
+
+  "goal": "Make recruiter immediately understand what the developer can do in a real company context"
+}
+}

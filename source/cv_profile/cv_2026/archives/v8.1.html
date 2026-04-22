@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Tayier NIMAIT - Software Architect & AI Orchestrator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #1e3a8a; /* Deep Indigo - Paris Standard */
+        --accent: #2563eb;
+        --slate-900: #0f172a;
+        --slate-700: #334155;
+        --slate-600: #475569;
+        --slate-500: #64748b;
+        --slate-100: #f1f5f9;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #f1f5f9;
+        color: var(--slate-900);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        line-height: 1.4;
+      }
+      .a4-container {
+        width: 210mm;
+        height: 297mm;
+        background: white;
+        margin: 5mm auto;
+        padding: 8mm 10mm;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+      }
+      .section-title {
+        font-size: 8pt;
+        font-weight: 800;
+        color: var(--slate-500);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid var(--slate-100);
+        padding-bottom: 4px;
+      }
+      .project-card {
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.01) 0%,
+          rgba(37, 99, 235, 0.03) 100%
+        );
+        border: 1px solid rgba(15, 23, 42, 0.05);
+        border-radius: 8px;
+        padding: 9px;
+        margin-bottom: 8px;
+        transition: all 0.2s ease;
+      }
+      .project-card:hover {
+        border-color: var(--accent);
+        background: rgba(37, 99, 235, 0.04);
+      }
+      .tech-pill {
+        background: white;
+        border: 1px solid #e2e8f0;
+        color: var(--primary);
+        font-size: 6.5pt;
+        padding: 1px 6px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .impact-badge {
+        font-size: 7.5pt;
+        font-weight: 800;
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+      @media print {
+        body {
+          background: white;
+        }
+        .a4-container {
+          margin: 0;
+          box-shadow: none;
+          width: 100%;
+          height: 100%;
+        }
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex justify-center">
+    <div class="fixed top-2 right-2 z-50 no-print">
+      <button
+        onclick="window.print()"
+        class="bg-blue-600 text-white font-bold py-1.5 px-4 rounded shadow-lg hover:bg-blue-700 transition flex items-center gap-2 text-sm"
+      >
+        <span>📥</span> Exporter PDF
+      </button>
+    </div>
+
+    <div class="a4-container">
+      <!-- HEADER -->
+      <header class="space-y-3 mb-4">
+        <!-- ROW 1: PHOTO | NAME/TITLE | QR LINKEDIN -->
+        <div class="flex items-center gap-5">
+          <div
+            class="w-14 h-14 rounded-xl border border-slate-200 shadow-sm overflow-hidden flex-shrink-0"
+          >
+            <img
+              src="assets/tayier_photo_pro-job.jpg"
+              alt="Tayier NIMAIT"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div class="flex-1">
+            <h1
+              class="text-2xl font-black text-slate-900 uppercase tracking-tighter leading-none mb-1"
+            >
+              Tayier NIMAIT
+            </h1>
+            <p
+              class="text-blue-600 font-extrabold text-[9pt] uppercase tracking-wide leading-tight"
+            >
+              Software Architect & AI Orchestrator | Python / Django / FastAPI
+            </p>
+            <div class="flex gap-4 text-[7.5pt] font-bold text-slate-500 mt-1 uppercase">
+              <span>ntparis9@gmail.com ✉️</span>
+              <span>07 53 21 08 64 📱</span>
+              <span>Paris, FR 📍</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="p-1 bg-white border border-slate-200 rounded shadow-sm">
+              <img src="assets/Qr_code_LinkedIn.png" alt="LinkedIn QR" class="w-14 h-14" />
+            </div>
+            <span class="text-[5pt] font-black text-slate-400 mt-1 uppercase">LinkedIn</span>
+          </div>
+        </div>
+
+        <!-- ROW 2: STRATEGIC PROFILE -->
+        <div class="flex items-start gap-5">
+          <div
+            class="flex-1 bg-slate-50 border-l-4 border-blue-600 p-3 px-4 rounded-r-xl shadow-sm"
+          >
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="bg-blue-100 text-blue-700 text-[6.5pt] font-black px-2 py-0.5 rounded uppercase tracking-tighter"
+              >
+                Double Expertise Scientifique & Logicielle
+              </span>
+              <div class="flex gap-2">
+                <span class="bg-blue-600 text-white text-[6.5pt] font-black px-2 py-0.5 rounded"
+                  >MODÈLE HYBRIDE</span
+                >
+                <span class="bg-slate-900 text-white text-[6.5pt] font-black px-2 py-0.5 rounded"
+                  >PARIS / REMOTE</span
+                >
+              </div>
+            </div>
+            <p class="text-[8.5pt] text-slate-800 leading-snug font-medium">
+              <strong>Profil :</strong> J’accompagne le développement de solutions logicielles
+              complexes en combinant <strong>architecture logicielle</strong>,
+              <strong>Python/Django</strong> et <strong>IA générative (LLMs)</strong>. J’utilise
+              l’IA comme levier d’industrialisation pour garantir des systèmes fiables et scalables.
+              Expert en <strong>Prompt Engineering</strong> et conception d'interfaces graphiques
+              (GUI).
+            </p>
+            <div class="mt-2 flex items-center justify-between border-t border-slate-200 pt-1.5">
+              <p class="text-[8pt] font-bold text-blue-700">
+                Disponibilité :
+                <span class="text-slate-900">Freelance (600€/j) ou Alternance Ingénierie IA</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <div class="p-1 bg-white border border-slate-200 rounded shadow-sm">
+              <img src="assets/AR_code_gitHub.png" alt="GitHub QR" class="w-14 h-14" />
+            </div>
+            <span class="text-[5pt] font-black text-slate-400 mt-1 uppercase tracking-widest"
+              >GitHub</span
+            >
+          </div>
+        </div>
+      </header>
+
+      <div class="grid grid-cols-12 gap-6">
+        <!-- LEFT COLUMN -->
+        <div class="col-span-8 space-y-5">
+          <section>
+            <h2 class="section-title">Expériences & Impact Stratégique</h2>
+            <div class="space-y-3">
+              <div class="project-card border-l-4 border-blue-600">
+                <div class="flex justify-between items-baseline mb-1">
+                  <h3
+                    class="font-bold text-slate-900 text-[10pt] uppercase italic underline decoration-blue-200"
+                  >
+                    Architecture & Industrialisation SaaS
+                  </h3>
+                  <span class="impact-badge">🚀 ROI & Scalabilité</span>
+                </div>
+                <ul class="text-[8.5pt] text-slate-600 space-y-0.5 mb-2 list-disc pl-4">
+                  <li>
+                    Développement de <strong>solutions SaaS métier</strong> et dashboards data en
+                    temps réel.
+                  </li>
+                  <li>
+                    Industrialisation de pipelines de données complexes via <strong>Python</strong>.
+                  </li>
+                  <li>Conception d'applications <strong>Industrielles</strong> (Django, PyQt6).</li>
+                </ul>
+                <div class="flex flex-wrap gap-1.5 text-center items-center">
+                  <span class="tech-pill">Architecture N-Tiers</span
+                  ><span class="tech-pill">Django</span><span class="tech-pill">FastAPI</span
+                  ><span class="tech-pill">CI/CD</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="flex justify-between items-baseline mb-1">
+                  <h3 class="font-bold text-slate-900 text-[10pt] uppercase tracking-tight">
+                    Assistant IA d’Analyse Automatisée
+                  </h3>
+                  <span class="impact-badge">⚡ MVP Fonctionnel Validé</span>
+                </div>
+                <p class="text-[8.5pt] text-slate-600 leading-snug mb-2 italic">
+                  Génération automatisée de rapports et visualisations.
+                  <strong>Architecture validée</strong> opérant sur des volumes de données
+                  hétérogènes.
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tech-pill">LLMs</span><span class="tech-pill">Pandas</span
+                  ><span class="tech-pill">Automatisation Métier</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="flex justify-between items-baseline mb-1">
+                  <h3 class="font-bold text-slate-900 text-[10pt] uppercase tracking-tight">
+                    Sécurisation & Fiabilisation des Flux IA
+                  </h3>
+                  <span class="impact-badge">🛡️ Qualité Industrielle</span>
+                </div>
+                <p class="text-[8.5pt] text-slate-600 leading-snug mb-2 italic">
+                  Contrôle et validation des sorties IA pour garantir une cohérence métier absolue.
+                  <strong>Zéro erreur de structure</strong> en production.
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tech-pill">Data Validation</span
+                  ><span class="tech-pill">Python Backend</span
+                  ><span class="tech-pill">Pydantic</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="flex justify-between items-baseline mb-1">
+                  <h3 class="font-bold text-slate-900 text-[10pt] uppercase tracking-tight">
+                    IoT & Edge Computing Agricole
+                  </h3>
+                  <span class="impact-badge">🌐 Innovation Terrain</span>
+                </div>
+                <p class="text-[8.5pt] text-slate-600 leading-snug mb-2 italic">
+                  Analyse d'images locale en zone blanche (2G/Edge).
+                  <strong>Traitement Edge Computing</strong> réduisant les flux de 70% sans perte
+                  critique.
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tech-pill">OpenCV</span><span class="tech-pill">Raspberry Pi</span
+                  ><span class="tech-pill">Embedded Python</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-title">Parcours Professionnel</h2>
+            <div class="space-y-4">
+              <div class="relative pl-5 border-l-2 border-green-200">
+                <div
+                  class="absolute w-2.5 h-2.5 bg-green-600 rounded-full -left-[6px] top-1.5"
+                ></div>
+                <div class="flex justify-between items-baseline">
+                  <h4 class="font-bold text-slate-900 text-[9.5pt]">
+                    Assistant IA (Stage) — KSPR Consulting
+                  </h4>
+                  <span
+                    class="text-[7pt] font-black text-green-600 uppercase bg-green-50 px-2 rounded"
+                    >Fév. 2026</span
+                  >
+                </div>
+                <p class="text-[8.5pt] text-slate-700 leading-snug">
+                  Contrôle de site par langage naturel pour l'accessibilité web.
+                  <strong>Navigation fluide validée</strong> sur plusieurs scénarios d'usage
+                  complexe.
+                </p>
+              </div>
+
+              <div class="relative pl-5 border-l-2 border-blue-200">
+                <div
+                  class="absolute w-2.5 h-2.5 bg-blue-600 rounded-full -left-[6px] top-1.5"
+                ></div>
+                <div class="flex justify-between items-baseline">
+                  <h4 class="font-bold text-slate-900 text-[9.5pt]">
+                    Développeur Full Stack — Cegi Santé
+                  </h4>
+                  <span
+                    class="text-[7pt] font-black text-blue-600 uppercase bg-blue-50 px-2 rounded"
+                    >2023</span
+                  >
+                </div>
+                <p class="text-[8.5pt] text-slate-700 leading-snug font-medium italic">
+                  Optimisation de 50% sur la traçabilité médicale. Développement d'interfaces
+                  complexes pour le secteur santé.
+                </p>
+              </div>
+
+              <div class="relative pl-5 border-l-2 border-slate-200">
+                <div
+                  class="absolute w-2.5 h-2.5 bg-slate-400 rounded-full -left-[6px] top-1.5"
+                ></div>
+                <div class="flex justify-between items-baseline">
+                  <h4 class="font-bold text-slate-900 text-[9.5pt]">
+                    Assistant IA Accessibilité — Omnilia
+                  </h4>
+                  <span
+                    class="text-[7pt] font-black text-slate-500 uppercase bg-slate-50 px-2 rounded"
+                    >2022</span
+                  >
+                </div>
+                <p class="text-[8.5pt] text-slate-700 leading-snug">
+                  Interaction Homme-Machine via langage naturel en environnement Agile.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="col-span-4 space-y-6">
+          <section>
+            <h2 class="section-title">Formation Elite</h2>
+            <div class="space-y-3">
+              <div class="group border-l-2 border-blue-600 pl-3 py-1.5 bg-blue-50/50 rounded-r-lg">
+                <p class="text-[8.5pt] font-extrabold text-slate-900 uppercase leading-none">
+                  Software Architect & AI Orchestrator
+                </p>
+                <p class="text-[7pt] font-black text-blue-600 mt-1">
+                  OpenClassrooms (RNCP 6 - Bac+5) | 2025
+                </p>
+              </div>
+              <div class="border-l-2 border-slate-300 pl-3">
+                <p class="text-[8pt] font-bold text-slate-800">Master Recherche Bio-mécanique 3D</p>
+                <p class="text-[7pt] text-slate-500 uppercase">ParisTech Arts et Métiers | 2013</p>
+              </div>
+              <div class="border-l-2 border-blue-400 pl-3">
+                <p class="text-[8pt] font-bold text-slate-800">Python & IoT (Certification)</p>
+                <p class="text-[7pt] text-slate-500 uppercase">CISCO / PCAP (En cours)</p>
+              </div>
+              <div class="border-l-2 border-slate-300 pl-3">
+                <p class="text-[8pt] font-bold text-slate-800 tracking-tight">
+                  Concepteur Développeur Applicatif
+                </p>
+                <p class="text-[7pt] text-slate-500 uppercase">Doranco Ecole Sup Tech | 2022</p>
+              </div>
+              <div class="border-l-2 border-slate-200 pl-3 opacity-60 italic">
+                <p class="text-[7.5pt] font-bold text-slate-800 tracking-tight">
+                  Diplôme de Stomatologie
+                </p>
+                <p class="text-[6.5pt] text-slate-500 uppercase">Univ. Médicale XJ (Chine)</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+            <h2 class="section-title !mb-4">Digital Footprint</h2>
+            <div class="space-y-4">
+              <div>
+                <h4 class="text-[7.5pt] font-black text-slate-900 uppercase mb-2">
+                  Expertises Clés
+                </h4>
+                <ul class="text-[8pt] text-slate-600 pl-1 space-y-1 font-medium">
+                  <li>• Orchestration LLMs & RAG</li>
+                  <li>• Architecture Micro-services</li>
+                  <li>• Automatisation Industrielle</li>
+                  <li>• Computer Vision (OpenCV)</li>
+                </ul>
+              </div>
+              <div class="pt-2 border-t border-slate-200">
+                <h4 class="text-[7.5pt] font-black text-blue-600 uppercase mb-2">
+                  📍 Mobilité & Langues
+                </h4>
+                <div class="text-[8pt] font-extrabold text-slate-800 space-y-1">
+                  <div class="flex gap-4">
+                    <span>Français <span class="text-blue-600">(Courant)</span></span>
+                    <span>Anglais <span class="text-slate-400 font-medium">(Pro)</span></span>
+                    <span>Chinois <span class="text-blue-600">(Courant)</span></span>
+                  </div>
+                  <div class="text-blue-600">Turc <span class="text-blue-600">(Courant)</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="bg-gradient-to-br from-indigo-600 to-blue-700 p-4 rounded-xl text-white shadow-lg overflow-hidden relative"
+          >
+            <div
+              class="absolute -right-2 -bottom-2 w-16 h-16 bg-white/10 rounded-full blur-2xl"
+            ></div>
+            <h3 class="text-[7pt] font-black uppercase tracking-widest mb-2 opacity-80">
+              Soft Skills
+            </h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="text-[7pt] font-bold bg-white/20 px-2 py-1 rounded">Analytique</span>
+              <span class="text-[7pt] font-bold bg-white/20 px-2 py-1 rounded">Leadership IA</span>
+              <span class="text-[7pt] font-bold bg-white/20 px-2 py-1 rounded">Adaptabilité</span>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

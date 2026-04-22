@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .morph-card {
+    box-shadow:
+      12px 12px 24px rgba(0, 0, 0, 0.28),
+      -6px -6px 14px rgba(255, 255, 255, 0.03),
+      inset 1px 1px 0 rgba(255, 255, 255, 0.03);
+    transition:
+      transform 260ms ease,
+      box-shadow 260ms ease,
+      border-color 260ms ease,
+      background-color 260ms ease;
+  }
+
+  .morph-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      16px 16px 34px rgba(0, 0, 0, 0.34),
+      -8px -8px 18px rgba(255, 255, 255, 0.035),
+      inset 1px 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .morph-button {
+    box-shadow:
+      8px 8px 18px rgba(0, 0, 0, 0.24),
+      -4px -4px 10px rgba(255, 255, 255, 0.03);
+    transition:
+      transform 260ms ease,
+      box-shadow 260ms ease,
+      filter 260ms ease;
+  }
+
+  .morph-button:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      12px 12px 26px rgba(0, 0, 0, 0.28),
+      -6px -6px 12px rgba(255, 255, 255, 0.04);
+  }
+
+  .morph-button:active {
+    transform: translateY(0) scale(0.99);
+    box-shadow:
+      inset 4px 4px 10px rgba(0, 0, 0, 0.22),
+      inset -2px -2px 8px rgba(255, 255, 255, 0.025);
+  }
+}
+
+/* Custom scrollbar hiding utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

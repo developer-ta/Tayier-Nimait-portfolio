@@ -1,0 +1,493 @@
+<!doctype html>
+
+<html class="dark" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              tertiary: '#dcb8ff',
+              'primary-container': '#f97316',
+              outline: '#a78b7d',
+              'on-error-container': '#ffdad6',
+              'tertiary-container': '#bc7cff',
+              'surface-container-highest': '#2f3445',
+              'secondary-fixed': '#acedff',
+              'on-primary-container': '#582200',
+              'secondary-container': '#03b5d3',
+              background: '#0d1322',
+              'tertiary-fixed-dim': '#dcb8ff',
+              'on-primary-fixed': '#341100',
+              'primary-fixed': '#ffdbca',
+              'inverse-surface': '#dde2f8',
+              'primary-fixed-dim': '#ffb690',
+              'error-container': '#93000a',
+              'on-secondary-container': '#00424e',
+              'on-background': '#dde2f8',
+              primary: '#ffb690',
+              'on-tertiary-fixed-variant': '#6700b5',
+              'on-surface-variant': '#e0c0b1',
+              error: '#ffb4ab',
+              'on-tertiary-container': '#4b0085',
+              'on-error': '#690005',
+              surface: '#0d1322',
+              'inverse-primary': '#9d4300',
+              'surface-container-high': '#242a3a',
+              'surface-bright': '#33394a',
+              'on-secondary': '#003640',
+              'on-primary': '#552100',
+              'surface-dim': '#0d1322',
+              'surface-container-low': '#151b2b',
+              'surface-tint': '#ffb690',
+              'on-tertiary': '#480081',
+              'inverse-on-surface': '#2a3040',
+              'surface-container': '#191f2f',
+              'on-primary-fixed-variant': '#783200',
+              'surface-variant': '#2f3445',
+              'on-surface': '#dde2f8',
+              'outline-variant': '#584237',
+              'on-secondary-fixed-variant': '#004e5c',
+              'surface-container-lowest': '#080e1d',
+              'secondary-fixed-dim': '#4cd7f6',
+              secondary: '#4cd7f6',
+              'tertiary-fixed': '#efdbff',
+              'on-secondary-fixed': '#001f26',
+              'on-tertiary-fixed': '#2c0051',
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              '2xl': '1.5rem',
+              full: '9999px',
+            },
+            fontFamily: {
+              headline: ['Epilogue'],
+              body: ['Manrope'],
+              label: ['Manrope'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .morph-outset {
+        box-shadow:
+          6px 6px 12px rgba(0, 0, 0, 0.4),
+          -4px -4px 12px rgba(255, 255, 255, 0.02);
+      }
+      .morph-inset {
+        box-shadow:
+          inset 4px 4px 8px rgba(0, 0, 0, 0.5),
+          inset -2px -2px 8px rgba(255, 255, 255, 0.01);
+      }
+      .morph-button-primary {
+        background: linear-gradient(135deg, #f97316 0%, #d97706 100%);
+        box-shadow:
+          4px 4px 10px rgba(0, 0, 0, 0.3),
+          inset 1px 1px 2px rgba(255, 255, 255, 0.2);
+      }
+      .morph-button-primary:active {
+        transform: scale(0.96);
+        box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.4);
+      }
+      .glass-panel {
+        background: rgba(25, 31, 47, 0.7);
+        backdrop-filter: blur(16px);
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-background font-body min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <nav
+      class="bg-[#0d1322]/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)]"
+    >
+      <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+        <div class="text-2xl font-black tracking-tighter text-orange-500 font-['Epilogue']">
+          SNORBIK
+        </div>
+        <!-- Desktop Links -->
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-slate-400 hover:text-white transition-colors hover:bg-white/5 hover:backdrop-blur-md rounded-lg px-3 py-2 transition-all duration-300"
+            href="#"
+            >Expertise</a
+          >
+          <a
+            class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-orange-500 border-b-2 border-orange-500 pb-1 hover:bg-white/5 hover:backdrop-blur-md rounded-lg px-3 transition-all duration-300"
+            href="#"
+            >Projets</a
+          >
+          <a
+            class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-slate-400 hover:text-white transition-colors hover:bg-white/5 hover:backdrop-blur-md rounded-lg px-3 py-2 transition-all duration-300"
+            href="#"
+            >Vision</a
+          >
+          <a
+            class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-slate-400 hover:text-white transition-colors hover:bg-white/5 hover:backdrop-blur-md rounded-lg px-3 py-2 transition-all duration-300"
+            href="#"
+            >Process</a
+          >
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden sm:flex gap-2 mr-4">
+            <span
+              class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors"
+              >smart_toy</span
+            >
+            <span
+              class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors"
+              >code</span
+            >
+          </div>
+          <button
+            class="morph-button-primary text-white font-['Epilogue'] text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full transition-all"
+          >
+            Télécharger CV
+          </button>
+        </div>
+      </div>
+      <div class="bg-gradient-to-b from-[#1a2236] to-transparent h-[1px] opacity-20"></div>
+    </nav>
+    <main class="flex-grow">
+      <!-- Hero Section -->
+      <section class="relative pt-24 pb-16 px-8 max-w-7xl mx-auto overflow-hidden">
+        <div
+          class="absolute -top-24 -left-24 w-96 h-96 bg-primary-container/10 rounded-full blur-[120px]"
+        ></div>
+        <div
+          class="absolute top-1/2 -right-24 w-64 h-64 bg-secondary-container/10 rounded-full blur-[100px]"
+        ></div>
+        <div class="relative z-10 text-center max-w-3xl mx-auto">
+          <span
+            class="inline-block px-4 py-1.5 rounded-full bg-surface-container-high text-primary font-semibold text-xs tracking-widest uppercase mb-6 morph-outset"
+            >Portfolio 2026</span
+          >
+          <h1
+            class="font-headline text-5xl md:text-7xl font-black tracking-tighter text-on-background leading-none mb-8"
+          >
+            Mes projets &amp; <br /><span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-orange-400"
+              >cas concrets</span
+            >
+          </h1>
+          <p class="font-body text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto">
+            Des solutions concrètes en automatisation et IA pour des problématiques métier réelles.
+          </p>
+        </div>
+      </section>
+      <!-- Filters Section -->
+      <section class="px-8 max-w-7xl mx-auto mb-16">
+        <div
+          class="flex flex-wrap justify-center gap-4 p-2 bg-surface-container-low rounded-2xl morph-inset max-w-fit mx-auto"
+        >
+          <button
+            class="px-6 py-2 rounded-xl text-sm font-bold transition-all bg-primary-container text-white morph-outset"
+          >
+            Tous
+          </button>
+          <button
+            class="px-6 py-2 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all"
+          >
+            Data
+          </button>
+          <button
+            class="px-6 py-2 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all"
+          >
+            IA
+          </button>
+          <button
+            class="px-6 py-2 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all"
+          >
+            Automation
+          </button>
+        </div>
+      </section>
+      <!-- Projects Grid -->
+      <section class="px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 pb-24">
+        <!-- Project 1 -->
+        <div
+          class="group bg-surface-container p-8 rounded-2xl morph-outset flex flex-col transition-all hover:-translate-y-2"
+        >
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="p-3 bg-surface-container-lowest rounded-xl morph-inset text-primary-container"
+            >
+              <span class="material-symbols-outlined text-3xl">database</span>
+            </div>
+            <span
+              class="px-3 py-1 bg-surface-container-highest text-secondary text-[10px] font-bold uppercase tracking-widest rounded-lg"
+              >DATA PIPELINE</span
+            >
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-4">
+            Automatisation d'analyse de données commerciales
+          </h3>
+          <div class="space-y-6 flex-grow">
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Problème</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Imports manuels chronophages et erreurs de saisie récurrentes ralentissant
+                l'analyse.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase font-bold text-primary tracking-wider">Solution</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Pipeline Python automatisé avec nettoyage de données et export dynamique vers BI.
+              </p>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+            <div>
+              <p class="text-[10px] uppercase font-bold text-secondary tracking-wider">Impact</p>
+              <p class="text-xl font-headline font-black text-white">Gain de temps ≈90%</p>
+            </div>
+            <span
+              class="material-symbols-outlined text-primary-container opacity-0 group-hover:opacity-100 transition-opacity"
+              >arrow_forward</span
+            >
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div
+          class="group bg-surface-container p-8 rounded-2xl morph-outset flex flex-col transition-all hover:-translate-y-2"
+        >
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="p-3 bg-surface-container-lowest rounded-xl morph-inset text-primary-container"
+            >
+              <span class="material-symbols-outlined text-3xl">psychology</span>
+            </div>
+            <span
+              class="px-3 py-1 bg-surface-container-highest text-secondary text-[10px] font-bold uppercase tracking-widest rounded-lg"
+              >LLM &amp; RAG</span
+            >
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-4">Assistant IA métier</h3>
+          <div class="space-y-6 flex-grow">
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Problème</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Surcharge du support interne face à des questions techniques répétitives.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase font-bold text-primary tracking-wider">Solution</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Agent RAG intelligent indexant toute la documentation technique interne.
+              </p>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+            <div>
+              <p class="text-[10px] uppercase font-bold text-secondary tracking-wider">Impact</p>
+              <p class="text-xl font-headline font-black text-white">-60% délai réponse</p>
+            </div>
+            <span
+              class="material-symbols-outlined text-primary-container opacity-0 group-hover:opacity-100 transition-opacity"
+              >arrow_forward</span
+            >
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div
+          class="group bg-surface-container p-8 rounded-2xl morph-outset flex flex-col transition-all hover:-translate-y-2"
+        >
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="p-3 bg-surface-container-lowest rounded-xl morph-inset text-primary-container"
+            >
+              <span class="material-symbols-outlined text-3xl">monitoring</span>
+            </div>
+            <span
+              class="px-3 py-1 bg-surface-container-highest text-secondary text-[10px] font-bold uppercase tracking-widest rounded-lg"
+              >DASHBOARD</span
+            >
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-4">Dashboard de performance IA</h3>
+          <div class="space-y-6 flex-grow">
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Problème</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Manque de visibilité sur les KPI en temps réel pour le management.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase font-bold text-primary tracking-wider">Solution</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Interface temps réel React connectée aux API prédictives de l'entreprise.
+              </p>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+            <div>
+              <p class="text-[10px] uppercase font-bold text-secondary tracking-wider">Impact</p>
+              <p class="text-xl font-headline font-black text-white">Décision stratégique</p>
+            </div>
+            <span
+              class="material-symbols-outlined text-primary-container opacity-0 group-hover:opacity-100 transition-opacity"
+              >arrow_forward</span
+            >
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div
+          class="group bg-surface-container p-8 rounded-2xl morph-outset flex flex-col border border-primary-container/20 transition-all hover:-translate-y-2"
+        >
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="p-3 bg-surface-container-lowest rounded-xl morph-inset text-primary-container"
+            >
+              <span class="material-symbols-outlined text-3xl">hub</span>
+            </div>
+            <span
+              class="px-3 py-1 bg-primary text-on-primary text-[10px] font-black uppercase tracking-widest rounded-lg"
+              >EN COURS</span
+            >
+          </div>
+          <h3 class="font-headline text-2xl font-bold mb-4">Agent IA pour workflows métier</h3>
+          <div class="space-y-6 flex-grow">
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Problème</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Orchestration complexe entre divers outils SaaS sans communication fluide.
+              </p>
+            </div>
+            <div class="space-y-2">
+              <p class="text-[10px] uppercase font-bold text-primary tracking-wider">Solution</p>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Agents autonomes multi-étapes gérant la logique métier entre API.
+              </p>
+            </div>
+          </div>
+          <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+            <div>
+              <p class="text-[10px] uppercase font-bold text-secondary tracking-wider">Objectif</p>
+              <p class="text-xl font-headline font-black text-white">Productivité x10</p>
+            </div>
+            <span
+              class="material-symbols-outlined text-primary-container opacity-0 group-hover:opacity-100 transition-opacity"
+              >pending</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Method Section -->
+      <section class="bg-surface-container-low py-24 border-y border-white/5">
+        <div class="px-8 max-w-7xl mx-auto">
+          <div class="mb-16">
+            <h2 class="font-headline text-4xl font-bold mb-4">Ma méthode</h2>
+            <div class="w-20 h-1.5 bg-primary-container rounded-full"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="bg-surface-container p-8 rounded-2xl morph-outset">
+              <div class="text-3xl font-black text-primary/20 mb-4 font-headline">01</div>
+              <h4 class="text-lg font-bold mb-4">Analyse du besoin</h4>
+              <p class="text-sm text-slate-400">
+                Immersion complète dans votre workflow pour identifier les goulots d'étranglement.
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="bg-surface-container p-8 rounded-2xl morph-outset">
+              <div class="text-3xl font-black text-primary/20 mb-4 font-headline">02</div>
+              <h4 class="text-lg font-bold mb-4">Conception technique</h4>
+              <p class="text-sm text-slate-400">
+                Architecture de la solution logicielle en privilégiant scalabilité et sécurité.
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="bg-surface-container p-8 rounded-2xl morph-outset">
+              <div class="text-3xl font-black text-primary/20 mb-4 font-headline">03</div>
+              <h4 class="text-lg font-bold mb-4">Implémentation agile</h4>
+              <p class="text-sm text-slate-400">
+                Développement itératif avec des retours constants pour ajuster le produit.
+              </p>
+            </div>
+            <!-- Step 4 -->
+            <div class="bg-surface-container p-8 rounded-2xl morph-outset">
+              <div class="text-3xl font-black text-primary/20 mb-4 font-headline">04</div>
+              <h4 class="text-lg font-bold mb-4">Mise en production</h4>
+              <p class="text-sm text-slate-400">
+                Déploiement, formation des équipes et maintenance évolutive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="px-8 py-24 max-w-4xl mx-auto text-center relative">
+        <div class="absolute inset-0 bg-primary-container/5 rounded-[4rem] blur-3xl -z-10"></div>
+        <h2 class="font-headline text-4xl md:text-5xl font-black mb-8">
+          Prêt à automatiser plus vite ?
+        </h2>
+        <p class="font-body text-slate-400 mb-12 text-lg">
+          Discutons de vos enjeux et transformons vos processus métier en moteurs de croissance.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <button
+            class="morph-button-primary px-10 py-4 rounded-2xl font-bold text-white tracking-wide uppercase text-sm shadow-xl flex items-center justify-center gap-2"
+          >
+            <span class="material-symbols-outlined">send</span> Lancer un projet
+          </button>
+          <button
+            class="px-10 py-4 rounded-2xl font-bold bg-surface-container-high morph-outset text-on-surface tracking-wide uppercase text-sm hover:text-primary transition-colors flex items-center justify-center gap-2"
+          >
+            <span class="material-symbols-outlined">calendar_today</span> Réserver un audit
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#0d1322] w-full mt-auto py-12 border-t border-white/5">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center w-full px-8 max-w-7xl mx-auto gap-6"
+      >
+        <div class="text-lg font-bold text-slate-200">SNORBIK</div>
+        <div class="flex gap-8">
+          <a
+            class="font-['Manrope'] text-xs text-slate-500 hover:text-orange-500 transition-colors"
+            href="#"
+            >LinkedIn</a
+          >
+          <a
+            class="font-['Manrope'] text-xs text-slate-500 hover:text-orange-500 transition-colors"
+            href="#"
+            >GitHub</a
+          >
+          <a
+            class="font-['Manrope'] text-xs text-slate-500 hover:text-orange-500 transition-colors"
+            href="#"
+            >Twitter</a
+          >
+          <a
+            class="font-['Manrope'] text-xs text-slate-500 hover:text-orange-500 transition-colors"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <p class="font-['Manrope'] text-xs text-slate-500 text-center md:text-right">
+          © 2024 SNORBIK - L'Atelier Digital de l'Automatisation
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

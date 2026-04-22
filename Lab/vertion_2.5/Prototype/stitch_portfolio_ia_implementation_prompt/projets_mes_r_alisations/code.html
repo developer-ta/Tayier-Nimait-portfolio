@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;700;900&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#efdbff",
+                    "on-tertiary": "#480081",
+                    "on-secondary-fixed": "#001f26",
+                    "secondary": "#4cd7f6",
+                    "on-tertiary-fixed-variant": "#6700b5",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "on-secondary": "#003640",
+                    "on-primary-fixed-variant": "#783200",
+                    "surface-container-low": "#151b2b",
+                    "surface-dim": "#0d1322",
+                    "on-background": "#dde2f8",
+                    "outline": "#a78b7d",
+                    "on-primary-fixed": "#341100",
+                    "on-tertiary-fixed": "#2c0051",
+                    "error": "#ffb4ab",
+                    "surface-container": "#191f2f",
+                    "inverse-surface": "#dde2f8",
+                    "outline-variant": "#584237",
+                    "primary-fixed": "#ffdbca",
+                    "on-error": "#690005",
+                    "secondary-fixed": "#acedff",
+                    "primary-container": "#f97316",
+                    "inverse-on-surface": "#2a3040",
+                    "surface": "#0d1322",
+                    "on-surface": "#dde2f8",
+                    "inverse-primary": "#9d4300",
+                    "background": "#0d1322",
+                    "surface-container-highest": "#2f3445",
+                    "primary": "#ffb690",
+                    "on-primary-container": "#582200",
+                    "on-surface-variant": "#e0c0b1",
+                    "tertiary-container": "#bc7cff",
+                    "primary-fixed-dim": "#ffb690",
+                    "on-primary": "#552100",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-lowest": "#080e1d",
+                    "tertiary-fixed-dim": "#dcb8ff",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "tertiary": "#dcb8ff",
+                    "secondary-container": "#03b5d3",
+                    "surface-tint": "#ffb690",
+                    "surface-container-high": "#242a3a",
+                    "on-tertiary-container": "#4b0085",
+                    "on-secondary-container": "#00424e",
+                    "surface-variant": "#2f3445",
+                    "surface-bright": "#33394a",
+                    "error-container": "#93000a"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .morph-card {
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.4), -4px -4px 12px rgba(255,255,255,0.02);
+            transition: all 0.3s ease;
+        }
+        .morph-card:hover {
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.5), -6px -6px 20px rgba(255,255,255,0.03);
+            transform: translateY(-4px);
+        }
+        .morph-inset {
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.5), inset -2px -2px 8px rgba(255,255,255,0.02);
+        }
+        .text-glow-orange {
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+        .nav-link-glow {
+            text-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Restored Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0d1322]/60 backdrop-blur-xl border-b border-white/5">
+<div class="flex justify-between items-center px-6 py-3 max-w-7xl mx-auto">
+<!-- Left: Logo and Title -->
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center rounded-lg shadow-[0_0_15px_rgba(249,115,22,0.4)]">
+<span class="text-on-primary-container font-black text-xl font-headline">S</span>
+</div>
+<div class="hidden sm:block">
+<div class="text-lg font-black tracking-tight text-white font-headline leading-tight">SNORBIK</div>
+<div class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">Tayier NIMAIT • IA &amp; Automation</div>
+</div>
+</div>
+<!-- Center: Navigation Links -->
+<div class="hidden lg:flex items-center bg-surface-container-low/50 px-6 py-2 rounded-full border border-white/5">
+<div class="flex items-center space-x-8">
+<a class="text-slate-400 hover:text-white transition-colors duration-300 text-sm font-bold uppercase tracking-widest" href="#">Accueil</a>
+<a class="text-primary-container nav-link-glow text-sm font-bold uppercase tracking-widest relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary-container" href="#">Projets</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-300 text-sm font-bold uppercase tracking-widest" href="#">Services</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-300 text-sm font-bold uppercase tracking-widest" href="#">Méthode</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-300 text-sm font-bold uppercase tracking-widest" href="#">Contact</a>
+</div>
+</div>
+<!-- Right: Actions & Profile -->
+<div class="flex items-center gap-3">
+<div class="hidden md:flex items-center gap-2 mr-2">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-high hover:bg-white/10 transition-colors text-slate-400 hover:text-white">
+<span class="material-symbols-outlined text-xl">dark_mode</span>
+</button>
+<a class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-high hover:bg-white/10 transition-colors text-slate-400 hover:text-white" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-high hover:bg-white/10 transition-colors text-slate-400 hover:text-white" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.412-4.041-1.412-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+</div>
+<button class="bg-white/5 border border-white/10 text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-white/10 transition-all hidden sm:block">CV</button>
+<div class="h-10 w-10 rounded-full border-2 border-primary-container overflow-hidden shadow-[0_0_10px_rgba(249,115,22,0.3)]">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3K-9mXGvC1f4E8l-I-D9jXvK7_I3yS_K5Z6pX_w_r7m3V_W4_l4_P_X_V_w_r7m3V_W4_l4_P_X_V"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 max-w-7xl mx-auto px-6">
+<!-- Header Section -->
+<header class="mb-20">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-xs font-bold tracking-widest text-secondary uppercase">Portfolio 2024</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8 text-on-background">
+            Mes réalisations <br/>
+<span class="text-primary-container text-glow-orange">&amp; cas concrets</span>
+</h1>
+<p class="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed">
+            Transformation digitale par l'IA et l'automatisation. Une approche focalisée sur l'impact business et l'excellence technique.
+        </p>
+</header>
+<!-- Filters -->
+<div class="flex flex-wrap gap-4 mb-16">
+<button class="px-8 py-3 rounded-xl font-bold bg-primary-container text-on-primary-container shadow-lg transition-all">Tous</button>
+<button class="px-8 py-3 rounded-xl font-bold bg-surface-container-low text-on-surface hover:bg-surface-container-highest transition-all morph-card">Data</button>
+<button class="px-8 py-3 rounded-xl font-bold bg-surface-container-low text-on-surface hover:bg-surface-container-highest transition-all morph-card">IA</button>
+<button class="px-8 py-3 rounded-xl font-bold bg-surface-container-low text-on-surface hover:bg-surface-container-highest transition-all morph-card">Automation</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Project 1 -->
+<div class="morph-card bg-surface-container rounded-3xl overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Futuristic data network visualization with glowing orange lines and dark obsidian background in a high-tech laboratory setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq5fXtRQ5TWHxIrbeokvAEF1kYMPjmOoXlATvZpmtDluLGsaGizqS-NLNw1JDbHRjppBMJeEkCXU8bSeN5GJuVYkB9IS4kOlK90-WJjMwbXMAetSW-TUaFHVYlaGFdAZ0auUJvRWD287_c5cuCV1Hq3PDSAzIt0q_71p1m-wcMgprUMH5QjznpSVKqH34_Gds67pOAW54OX-pFJLc8JQu43tg9sKbZ7ASwOyMuxsIm0p5O3wgcQvr7rGX2Tp1S2SCwxAccSI_FpMI"/>
+<div class="absolute top-4 right-4 bg-green-500/20 backdrop-blur-md border border-green-500/30 px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-green-400 uppercase tracking-widest">Completed</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">Automation</span>
+<div class="h-px flex-1 bg-white/5"></div>
+</div>
+<h3 class="font-headline text-3xl font-black text-on-surface mb-6">Data Pipeline Automation</h3>
+<div class="space-y-6">
+<div>
+<p class="text-xs font-bold text-primary-container uppercase tracking-widest mb-1">Problème</p>
+<p class="text-slate-400 italic">Collecte de données manuelle sur 12 sources différentes, entraînant 15h de travail hebdo et 8% d'erreurs.</p>
+</div>
+<div>
+<p class="text-xs font-bold text-primary-container uppercase tracking-widest mb-1">Solution</p>
+<p class="text-on-surface">Architecture ETL serverless sous Python et Make, centralisation sur BigQuery avec monitoring temps réel.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl morph-inset border border-white/5">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Impact</p>
+<p class="text-2xl font-black text-on-surface">100% Automatisé <span class="text-secondary text-sm font-normal">(-15h/semaine)</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="morph-card bg-surface-container rounded-3xl overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sophisticated AI interface with minimalist holographic head silhouette surrounded by blue cyan glowing code particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA14DBKmeYuJx2j2HcnE4FaOd9X-EJwPl3DT7_-_-k7_E09RXzmRUOL5VObx1JgPDrbox_0DB9XaDDQ_s4lEQyoEMk48IvMMRd2Gbb8QRRbdUSEDClt-hW9cnyyy6JRZaHGd0M8zW_IuNQzhybacdZ0qw24UPkjwi53OJw6sfhyHfTs0sKDwTgfgJcFpE2p29z6pvNK2yyKxLux1VEZTFN9GsnRihFKFqTaeXLxfJ8JMrNafCXgLuZ959IxSvsiMX9YS-A8ezk8gVI"/>
+<div class="absolute top-4 right-4 bg-green-500/20 backdrop-blur-md border border-green-500/30 px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-green-400 uppercase tracking-widest">Completed</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">IA</span>
+<div class="h-px flex-1 bg-white/5"></div>
+</div>
+<h3 class="font-headline text-3xl font-black text-on-surface mb-6">AI Business Assistant</h3>
+<div class="space-y-6">
+<div>
+<p class="text-xs font-bold text-primary-container uppercase tracking-widest mb-1">Problème</p>
+<p class="text-slate-400 italic">Surcharge du support client interne avec 200+ requêtes répétitives sur les procédures RH et tech.</p>
+</div>
+<div>
+<p class="text-xs font-bold text-primary-container uppercase tracking-widest mb-1">Solution</p>
+<p class="text-on-surface">Agent RAG (Retrieval-Augmented Generation) personnalisé utilisant GPT-4o, branché sur la base de connaissances interne.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl morph-inset border border-white/5">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Impact</p>
+<p class="text-2xl font-black text-on-surface">75% Résolution <span class="text-secondary text-sm font-normal">en autonomie</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="morph-card bg-surface-container rounded-3xl overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Dark elegant dashboard interface featuring glowing data rings and neon cyan charts with deep depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYhCbGppvz54gAv0BP-jERJVpDwfZvdrx3vhO-75tKL0Q4vKkhRdQezA-hDoKa3u3GE1HhB375homI1u-oNl2OCpsgJF0lqme5pI68_uIh_nZk9H18cKm6tJgI5vNXQKd1eReZbBjFVSZKCzchxXVzQ2YtwdMZihfCw6eoCUSUWlj1zexppY1KIwHGijgzIWZvP5JTphFcR97Uvfcz2lC_EHtDC0Cc0zru36Vgf0MPw-PlCzFxdMnkmkCRE6j1OmDUz4TAqTRKcyc"/>
+<div class="absolute top-4 right-4 bg-green-500/20 backdrop-blur-md border border-green-500/30 px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-green-400 uppercase tracking-widest">Completed</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">Data</span>
+<div class="h-px flex-1 bg-white/5"></div>
+</div>
+<h3 class="font-headline text-3xl font-black text-on-surface mb-6">Performance Dashboard</h3>
+<div class="space-y-6">
+<div>
+<p class="text-xs font-bold text-primary-container uppercase tracking-widest mb-1">Problème</p>
+<p class="text-slate-400 italic">Manque de visibilité sur le ROI des campagnes marketing omnicanales en temps réel.</p>
+</div>
+<div>
+<p class="text-xs font-bold text-primary-container uppercase tracking-widest mb-1">Solution</p>
+<p class="text-on-surface">Dashboard interactif sous Looker Studio avec fusion de données Google Ads, Meta et CRM Hubspot.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl morph-inset border border-white/5">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Impact</p>
+<p class="text-2xl font-black text-on-surface">+22% Optimisation <span class="text-secondary text-sm font-normal">du budget marketing</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="morph-card bg-surface-container rounded-3xl overflow-hidden group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Abstract representation of multiple digital streams merging into a central glowing orange node with complex geometric patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvD7oAkvhGZNmt-I7PrD_UzuboitdkMLMfW28280Tm8uzhmAAIBLkOdniwYmjLFmBuhRWYt85q21magTgkzKNAEDH2CiGOfq544ai6FuGfQVKlMPW_H5pJUtnf6yb4RP9MIY9drmuhqvobOwiwKJznb1uFG9AznzYMqUsb2Vsq-1PZFzPm4LmZjGBwIX-hT5trTeDOxfZANeXGT-dJin5ubX4HIu9582OZiPz34vf-_N4QhHRgPdzSaLLL5bl0kLE6Db0C-LPreH8"/>
+<div class="absolute top-4 right-4 bg-primary-container/20 backdrop-blur-md border border-primary-container/30 px-3 py-1 rounded-full">
+<span class="text-xs font-bold text-primary-container uppercase tracking-widest">In Progress</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">Automation / IA</span>
+<div class="h-px flex-1 bg-white/5"></div>
+</div>
+<h3 class="font-headline text-3xl font-black text-on-surface mb-6">AI Workflow Agent</h3>
+<div class="space-y-6">
+<div>
+<p class="text-xs font-bold text-primary-container uppercase tracking-widest mb-1">Problème</p>
+<p class="text-slate-400 italic">Complexité des workflows de validation de documents juridiques multi-pays.</p>
+</div>
+<div>
+<p class="text-xs font-bold text-primary-container uppercase tracking-widest mb-1">Solution</p>
+<p class="text-on-surface">Développement d'un agent autonome analysant les clauses via LLM et orchestrant les signatures via n8n.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl morph-inset border border-white/5">
+<p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Impact Prévu</p>
+<p class="text-2xl font-black text-on-surface">Red. -60% <span class="text-secondary text-sm font-normal">du cycle de validation</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Methodology Section -->
+<section class="mt-40 mb-32">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl font-black text-on-background mb-4 uppercase tracking-tighter">Ma méthode</h2>
+<div class="w-24 h-1 bg-primary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-10 rounded-3xl bg-surface-container-low morph-card border-t border-white/5">
+<div class="w-14 h-14 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary-container text-3xl">psychology</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-4">01. Immersion</h4>
+<p class="text-slate-400 leading-relaxed">Analyse profonde de vos processus actuels pour identifier les goulots d'étranglement réels et les opportunités de croissance cachées.</p>
+</div>
+<div class="p-10 rounded-3xl bg-surface-container-low morph-card border-t border-white/5">
+<div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl">terminal</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-4">02. Engineering</h4>
+<p class="text-slate-400 leading-relaxed">Développement agile de solutions robustes. Focus sur l'interopérabilité des outils et la scalabilité de l'architecture.</p>
+</div>
+<div class="p-10 rounded-3xl bg-surface-container-low morph-card border-t border-white/5">
+<div class="w-14 h-14 bg-tertiary-container/10 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-tertiary-container text-3xl">rocket_launch</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-4">03. Impact</h4>
+<p class="text-slate-400 leading-relaxed">Déploiement, formation des équipes et mesure de l'impact ROI. Nous itérons jusqu'à atteindre l'excellence opérationnelle.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative p-12 md:p-20 rounded-[3rem] bg-gradient-to-br from-surface-container to-surface overflow-hidden morph-card border border-white/5">
+<div class="relative z-10 max-w-3xl">
+<h2 class="font-headline text-4xl md:text-6xl font-black text-on-background mb-8 tracking-tighter">
+                Prêt à transformer <br/>
+<span class="text-primary-container">votre vision en réalité ?</span>
+</h2>
+<p class="text-xl text-slate-400 mb-12 max-w-xl">
+                Chaque projet commence par une conversation. Discutons de vos enjeux et voyons comment l'IA peut démultiplier vos résultats.
+            </p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-primary-container text-on-primary-container px-10 py-5 rounded-2xl font-black text-lg shadow-[0_0_30px_rgba(249,115,22,0.4)] hover:scale-105 transition-all">Lancer un projet</button>
+<button class="bg-surface-container-highest text-on-surface px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all morph-card">Réserver un audit</button>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-container/20 rounded-full blur-[100px]"></div>
+<div class="absolute -top-20 -right-10 w-60 h-60 bg-secondary/10 rounded-full blur-[80px]"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0d1322] w-full py-12 border-t border-white/5 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start">
+<div class="font-headline font-bold text-primary-container text-xl mb-2">SNORBIK</div>
+<p class="font-body text-sm tracking-wide text-slate-500">© 2024 SNORBIK | AI &amp; Automation by Tayier NIMAIT</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-primary-container transition-all font-body text-sm tracking-wide" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-primary-container transition-all font-body text-sm tracking-wide" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-primary-container transition-all font-body text-sm tracking-wide" href="#">Email</a>
+<a class="text-slate-500 hover:text-primary-container transition-all font-body text-sm tracking-wide" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SNORBIK | Tayier NIMAIT - AI &amp; Automation Expert</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#efdbff",
+                        "on-tertiary": "#480081",
+                        "on-secondary-fixed": "#001f26",
+                        "secondary": "#4cd7f6",
+                        "on-tertiary-fixed-variant": "#6700b5",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-secondary": "#003640",
+                        "on-primary-fixed-variant": "#783200",
+                        "surface-container-low": "#151b2b",
+                        "surface-dim": "#0d1322",
+                        "on-background": "#dde2f8",
+                        "outline": "#a78b7d",
+                        "on-primary-fixed": "#341100",
+                        "on-tertiary-fixed": "#2c0051",
+                        "error": "#ffb4ab",
+                        "surface-container": "#191f2f",
+                        "inverse-surface": "#dde2f8",
+                        "outline-variant": "#584237",
+                        "primary-fixed": "#ffdbca",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#acedff",
+                        "primary-container": "#f97316",
+                        "inverse-on-surface": "#2a3040",
+                        "surface": "#0d1322",
+                        "on-surface": "#dde2f8",
+                        "inverse-primary": "#9d4300",
+                        "background": "#0d1322",
+                        "surface-container-highest": "#2f3445",
+                        "primary": "#ffb690",
+                        "on-primary-container": "#582200",
+                        "on-surface-variant": "#e0c0b1",
+                        "tertiary-container": "#bc7cff",
+                        "primary-fixed-dim": "#ffb690",
+                        "on-primary": "#552100",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#080e1d",
+                        "tertiary-fixed-dim": "#dcb8ff",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "tertiary": "#dcb8ff",
+                        "secondary-container": "#03b5d3",
+                        "surface-tint": "#ffb690",
+                        "surface-container-high": "#242a3a",
+                        "on-tertiary-container": "#4b0085",
+                        "on-secondary-container": "#00424e",
+                        "surface-variant": "#2f3445",
+                        "surface-bright": "#33394a",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0d1322;
+            font-family: 'Manrope', sans-serif;
+            color: #dde2f8;
+        }
+        .morph-card {
+            background: #0d1322;
+            box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4), -4px -4px 12px rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .morph-card-inset {
+            background: #0d1322;
+            box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.5), inset -2px -2px 8px rgba(255, 255, 255, 0.02);
+        }
+        .morph-button {
+            transition: all 0.2s ease;
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), -4px -4px 12px rgba(255, 255, 255, 0.02);
+        }
+        .morph-button:active {
+            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5), inset -2px -2px 6px rgba(255, 255, 255, 0.02);
+            transform: scale(0.98);
+        }
+        .text-glow-orange {
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+        .text-glow-cyan {
+            text-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+        .glass-nav {
+            backdrop-filter: blur(24px);
+            background: rgba(13, 19, 34, 0.7);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .nav-link-glow {
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex justify-between items-center px-6 lg:px-12 py-3 max-w-[1600px] mx-auto">
+<!-- Left: Brand Logo + Info -->
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.3)]">
+<span class="text-on-primary-container font-black text-xl">S</span>
+</div>
+<div class="hidden sm:block">
+<div class="text-lg font-black tracking-tighter text-on-background uppercase font-headline leading-none">SNORBIK</div>
+<div class="text-[10px] text-secondary font-bold uppercase tracking-[0.2em] mt-1">Tayier NIMAIT • Expert AI</div>
+</div>
+</div>
+<!-- Center: Navigation Links -->
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-sm font-bold text-secondary nav-link-glow font-body transition-all" href="#">ACCUEIL</a>
+<a class="text-sm font-bold text-slate-400 hover:text-white transition-all font-body" href="#">PROJETS</a>
+<a class="text-sm font-bold text-slate-400 hover:text-white transition-all font-body" href="#">À PROPOS</a>
+<a class="text-sm font-bold text-slate-400 hover:text-white transition-all font-body" href="#">CONTACT</a>
+</nav>
+<!-- Right Side: Profile & Actions -->
+<div class="flex items-center gap-3">
+<button class="hidden xl:flex morph-button bg-surface-container-high text-on-surface px-5 py-2 rounded-xl text-xs font-black items-center gap-2 border border-white/5 uppercase">
+<span class="material-symbols-outlined text-sm">download</span>
+                CV PDF
+            </button>
+<div class="h-8 w-[1px] bg-white/10 mx-2 hidden xl:block"></div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-all">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-all">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-[20px]">dark_mode</span>
+</button>
+</div>
+<div class="ml-2 pl-4 border-l border-white/10 hidden sm:block">
+<img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-primary-container/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc2_wSGbGrQFYS-FIvYYpt-DHbbcnpZaDyalg6v8X5pRCYt7NyEUwiVj9tRFQn2BKuAEkgQxj31SnrpGzt_k0uekYEeLTYBkDgg0cRSDy_erXLZNtL6-sfwjLd8EbA3f4pEVsEFZPpgaN4wOtUObXUEMa8UP2hUx9IdJGl_phQOpSbYu91ECqY1Sys4CJaJXDe8cJagkiiQKQSuYDk_4DgVhBSJUByuXm5V8FRGb9r5LAKw0O9sv04RDsxec8OXbBWshI49t99VCI"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high mb-6">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-secondary text-sm font-bold uppercase tracking-widest font-label">Available for AI Projects</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black font-headline text-on-background leading-tight mb-6 tracking-tighter">
+                Tayier <span class="text-primary-container text-glow-orange">NIMAIT</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-light mb-10 max-w-2xl leading-relaxed">
+                Architecting the future through <span class="text-secondary font-semibold">AI Automation</span>. Bridging medical precision with deep neural engineering.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="morph-button bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-black text-lg flex items-center gap-3">
+<span class="material-symbols-outlined" data-weight="fill">description</span>
+                    Télécharger CV COMPLET (PDF)
+                </button>
+<button class="morph-button bg-surface-container-high text-on-surface px-8 py-4 rounded-xl font-bold flex items-center gap-3 border border-white/5">
+<span class="material-symbols-outlined">mail</span>
+                    Let's Talk
+                </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="morph-card rounded-3xl p-4 aspect-square flex items-center justify-center relative z-10">
+<img alt="Tayier Nimait Portrait" class="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="professional portrait of a tech professional in a dark studio setting with cinematic lighting and deep blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc2_wSGbGrQFYS-FIvYYpt-DHbbcnpZaDyalg6v8X5pRCYt7NyEUwiVj9tRFQn2BKuAEkgQxj31SnrpGzt_k0uekYEeLTYBkDgg0cRSDy_erXLZNtL6-sfwjLd8EbA3f4pEVsEFZPpgaN4wOtUObXUEMa8UP2hUx9IdJGl_phQOpSbYu91ECqY1Sys4CJaJXDe8cJagkiiQKQSuYDk_4DgVhBSJUByuXm5V8FRGb9r5LAKw0O9sv04RDsxec8OXbBWshI49t99VCI"/>
+</div>
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 blur-[100px] rounded-full"></div>
+</div>
+</section>
+<!-- Technical Skillset Bento -->
+<section class="mb-32">
+<h2 class="text-4xl font-black font-headline mb-12 flex items-center gap-4">
+<span class="text-secondary">01.</span> Technical Arsenal
+        </h2>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Skill 1: AI -->
+<div class="md:col-span-2 morph-card p-8 rounded-3xl flex flex-col justify-between">
+<div class="w-14 h-14 morph-card-inset rounded-2xl flex items-center justify-center text-primary-container mb-6">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">psychology</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-2">IA &amp; Machine Learning</h3>
+<p class="text-on-surface-variant text-sm">Deep Learning, Transformers, LLM orchestration, and prompt engineering.</p>
+</div>
+</div>
+<!-- Skill 2: Python -->
+<div class="md:col-span-1 morph-card p-8 rounded-3xl flex flex-col items-center justify-center text-center">
+<div class="text-4xl font-black text-secondary mb-4 font-headline">Python</div>
+<div class="w-full h-1.5 morph-card-inset rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[95%]"></div>
+</div>
+</div>
+<!-- Skill 3: React -->
+<div class="md:col-span-1 morph-card p-8 rounded-3xl flex flex-col items-center justify-center text-center">
+<div class="text-4xl font-black text-primary-container mb-4 font-headline">React</div>
+<div class="w-full h-1.5 morph-card-inset rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[85%]"></div>
+</div>
+</div>
+<!-- Skill 4: SQL -->
+<div class="md:col-span-2 morph-card p-8 rounded-3xl flex items-center gap-6">
+<div class="w-14 h-14 morph-card-inset rounded-full flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl">database</span>
+</div>
+<div class="flex-1">
+<h3 class="text-xl font-bold">PostgreSQL &amp; SQL</h3>
+<p class="text-on-surface-variant text-xs">Complex querying &amp; architecture.</p>
+</div>
+</div>
+<!-- Skill 5: Automation -->
+<div class="md:col-span-3 lg:col-span-4 morph-card p-8 rounded-3xl group">
+<h3 class="text-3xl font-black mb-6 text-glow-cyan">Automation Workflows</h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-5 py-2 morph-card-inset rounded-xl text-secondary font-bold">Zapier</span>
+<span class="px-5 py-2 morph-card-inset rounded-xl text-secondary font-bold">Make.com</span>
+<span class="px-5 py-2 morph-card-inset rounded-xl text-secondary font-bold">n8n</span>
+<span class="px-5 py-2 morph-card-inset rounded-xl text-secondary font-bold">LangChain</span>
+<span class="px-5 py-2 morph-card-inset rounded-xl text-secondary font-bold">API Integration</span>
+</div>
+</div>
+<!-- Skill 6: Data Viz -->
+<div class="md:col-span-1 lg:col-span-2 morph-card p-8 rounded-3xl flex items-end">
+<span class="text-5xl font-black text-white/10 uppercase font-headline">Data Viz</span>
+</div>
+</div>
+</section>
+<!-- Experience & Education -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
+<!-- Experience -->
+<div>
+<h2 class="text-4xl font-black font-headline mb-12 flex items-center gap-4">
+<span class="text-primary-container">02.</span> Experience
+            </h2>
+<div class="space-y-8">
+<div class="relative pl-8 border-l border-white/5 group">
+<div class="absolute -left-[5px] top-0 w-2.5 h-2.5 rounded-full bg-primary-container group-hover:scale-150 transition-transform"></div>
+<span class="text-sm text-secondary font-bold uppercase tracking-widest mb-2 block">Present</span>
+<h3 class="text-2xl font-bold mb-1">AI Automation Developer</h3>
+<p class="text-on-surface-variant font-medium mb-4">SNORBIK Labs</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Leading the development of autonomous agent systems for enterprise clients. Specializing in integrating LLMs into existing business operations to reduce overhead by up to 40%.
+                    </p>
+</div>
+<div class="relative pl-8 border-l border-white/5 group">
+<div class="absolute -left-[5px] top-0 w-2.5 h-2.5 rounded-full bg-slate-700 group-hover:bg-primary-container transition-colors"></div>
+<span class="text-sm text-on-surface-variant font-bold uppercase tracking-widest mb-2 block">2021 - 2023</span>
+<h3 class="text-2xl font-bold mb-1">Software Solutions Architect</h3>
+<p class="text-on-surface-variant font-medium mb-4">TechInnovate Corp</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Developed bespoke automation tools using Python and React. Managed full-stack delivery of 12+ major automation projects.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Education -->
+<div>
+<h2 class="text-4xl font-black font-headline mb-12 flex items-center gap-4">
+<span class="text-secondary">03.</span> Education
+            </h2>
+<div class="space-y-8">
+<div class="morph-card p-6 rounded-3xl border-l-4 border-secondary">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-black">Expert IA - RNCP 7</h3>
+<p class="text-secondary font-bold">Specialization in Neural Networks</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-weight="fill">school</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Master's level certification focusing on advanced AI architectures, deployment, and ethical implementation.</p>
+</div>
+<div class="morph-card p-6 rounded-3xl border-l-4 border-tertiary">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-black">Medical Background</h3>
+<p class="text-tertiary font-bold">Professional Curriculum</p>
+</div>
+<span class="material-symbols-outlined text-tertiary" data-weight="fill">medical_services</span>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">A unique foundation in healthcare that provides a structured, analytical approach to problem-solving and complex system architecture.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Major Projects -->
+<section class="mb-32">
+<h2 class="text-4xl font-black font-headline mb-12 flex items-center gap-4">
+<span class="text-primary-container">04.</span> Major Projects
+        </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1 -->
+<div class="group morph-card rounded-[2rem] overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<img alt="AI Agent Workflow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="abstract visualization of neural networks and glowing data streams in a dark technical environment with orange and cyan accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2wW5cD50XfAD7l3csojSocwpnfBib-FGdHJ_KdI4hJz1anp0TByp3sYLA4pnq0dr4Igc49QNphqODL5hxBbLTgashKlCSPgQQ1qxTCTygsglsWsGUQrM1qhl7cyevYLL-lpnVLJfWgY-Dor8pGBonuL8tfLAhp4u6zMT8drAhOAN1S4DXtIDWi9IA1zONJVk_ZjVuQcnr-vmI6J-wdC5Ex3eaWhZFjCAX0QtZGRlZhU-1VL9VXPkFWgN3JtL4ewAE4xkDtmt9k5k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="px-3 py-1 bg-primary-container text-on-primary-container rounded-lg text-xs font-black uppercase tracking-widest">Enterprise AI</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-3xl font-black mb-4">Autonomous Agent Mesh</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                        A decentralized system of AI agents capable of collaborative task solving, featuring a custom React dashboard and Python-based orchestration engine.
+                    </p>
+<div class="flex gap-4">
+<a class="text-secondary font-bold flex items-center gap-2 hover:translate-x-2 transition-transform" href="#">
+                            View Case Study <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group morph-card rounded-[2rem] overflow-hidden">
+<div class="h-64 overflow-hidden relative">
+<img alt="Medical Data Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="close-up of a sleek futuristic data dashboard with glowing charts and medical metrics in shades of deep blue and electric cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyDYho4SAqwXFk4YFFrGdj-lCAHANhV-ph1g6Ptoo7QKGtAGHGG8O3EP2RLVFNpQ0Go45ySzC2xnejPLO8a_1zkYiiE2yD3IJhdZAiQrgbDyaJyRnax_N3qAi6pgUgAUVVcTi_HudoWzRjEbgITaeHe6plOFoWXMh1cbcJds26lplBiMNr0jWnaNMdGCnm_2sre7DDU41Dy3F8KoVoFGbT7DwrtF-7TNinXlrDVik-4xYGdAgsa07FKLPgXZqJBFYbUwCzUIpUSsY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="px-3 py-1 bg-secondary text-on-secondary rounded-lg text-xs font-black uppercase tracking-widest">HealthTech</span>
+</div>
+</div>
+<div class="p-8">
+<h3 class="text-3xl font-black mb-4">Med-Analytica Suite</h3>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                        Leveraging my medical background to build a predictive diagnostic assistant. Built with PyTorch and integrated into hospital CRM via custom APIs.
+                    </p>
+<div class="flex gap-4">
+<a class="text-secondary font-bold flex items-center gap-2 hover:translate-x-2 transition-transform" href="#">
+                            View Case Study <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="morph-card p-12 md:p-20 rounded-[3rem] text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-6xl font-black font-headline mb-8 max-w-3xl mx-auto">Prêt à automatiser votre <span class="text-secondary">succès</span> ?</h2>
+<p class="text-xl text-on-surface-variant mb-12 max-w-xl mx-auto">
+                Consultez l'intégralité de mon parcours et de mes compétences techniques.
+            </p>
+<button class="morph-button bg-primary-container text-on-primary-container px-12 py-5 rounded-2xl font-black text-xl flex items-center gap-4 mx-auto">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">download</span>
+                Télécharger CV COMPLET (PDF)
+            </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-white/5 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+<div class="mb-6 md:mb-0">
+<div class="font-headline font-bold text-orange-500 text-xl">SNORBIK</div>
+<p class="text-slate-500 font-body text-sm mt-2">© 2024 SNORBIK | AI &amp; Automation by Tayier NIMAIT</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-orange-400 transition-all font-body text-sm" href="#">LinkedIn</a>
+<a class="text-slate-500 hover:text-orange-400 transition-all font-body text-sm" href="#">GitHub</a>
+<a class="text-slate-500 hover:text-orange-400 transition-all font-body text-sm" href="#">Email</a>
+<a class="text-slate-500 hover:text-orange-400 transition-all font-body text-sm" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

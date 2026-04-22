@@ -1,0 +1,56 @@
+body {
+  background-color: #0d1322;
+  color: #dde2f8;
+  overflow-x: hidden;
+}
+
+.morph-outset {
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), -4px -4px 12px rgba(255, 255, 255, 0.02);
+}
+
+.morph-inset {
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5), inset -2px -2px 8px rgba(255, 255, 255, 0.02);
+}
+
+.morph-card {
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4), -4px -4px 12px rgba(255, 255, 255, 0.02);
+}
+
+.glass-nav {
+  background: rgba(13, 19, 34, 0.6);
+  backdrop-filter: blur(24px);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+.nav-glow,
+.nav-link-glow {
+  text-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+}
+
+.project-img-container img.hover-gif {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover img.hover-gif {
+  opacity: 1;
+}
+
+.project-card:hover img.static-img {
+  opacity: 0;
+}
+
+.static-img {
+  transition: opacity 0.3s ease;
+}

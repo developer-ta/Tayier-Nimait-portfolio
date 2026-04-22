@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="fr" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SNORBIK | Tayier NIMAIT - Expert IA & Automation</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/6.3.0/react-router-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'tertiary-fixed': '#efdbff',
+              'on-tertiary': '#480081',
+              'on-secondary-fixed': '#001f26',
+              secondary: '#4cd7f6',
+              'on-tertiary-fixed-variant': '#6700b5',
+              'on-secondary-fixed-variant': '#004e5c',
+              'on-secondary': '#003640',
+              'on-primary-fixed-variant': '#783200',
+              'surface-container-low': '#151b2b',
+              'surface-dim': '#0d1322',
+              'on-background': '#dde2f8',
+              outline: '#a78b7d',
+              'on-primary-fixed': '#341100',
+              'on-tertiary-fixed': '#2c0051',
+              error: '#ffb4ab',
+              'surface-container': '#191f2f',
+              'inverse-surface': '#dde2f8',
+              'outline-variant': '#584237',
+              'primary-fixed': '#ffdbca',
+              'on-error': '#690005',
+              'secondary-fixed': '#acedff',
+              'primary-container': '#f97316',
+              'inverse-on-surface': '#2a3040',
+              surface: '#0d1322',
+              'on-surface': '#dde2f8',
+              'inverse-primary': '#9d4300',
+              background: '#0d1322',
+              'surface-container-highest': '#2f3445',
+              primary: '#ffb690',
+              'on-primary-container': '#582200',
+              'on-surface-variant': '#e0c0b1',
+              'tertiary-container': '#bc7cff',
+              'primary-fixed-dim': '#ffb690',
+              'on-primary': '#552100',
+              'on-error-container': '#ffdad6',
+              'surface-container-lowest': '#080e1d',
+              'tertiary-fixed-dim': '#dcb8ff',
+              'secondary-fixed-dim': '#4cd7f6',
+              tertiary: '#dcb8ff',
+              'secondary-container': '#03b5d3',
+              'surface-tint': '#ffb690',
+              'surface-container-high': '#242a3a',
+              'on-tertiary-container': '#4b0085',
+              'on-secondary-container': '#00424e',
+              'surface-variant': '#2f3445',
+              'surface-bright': '#33394a',
+              'error-container': '#93000a',
+            },
+            fontFamily: {
+              headline: ['Epilogue'],
+              body: ['Manrope'],
+              label: ['Manrope'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '1.5rem',
+              full: '9999px',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .morph-card,
+      .morph-outset {
+        box-shadow:
+          6px 6px 12px rgba(0, 0, 0, 0.4),
+          -4px -4px 12px rgba(255, 255, 255, 0.02);
+        transition: all 0.3s ease;
+      }
+      .morph-card:hover {
+        box-shadow:
+          10px 10px 20px rgba(0, 0, 0, 0.5),
+          -6px -6px 20px rgba(255, 255, 255, 0.03);
+        transform: translateY(-4px);
+      }
+      .morph-inset {
+        box-shadow:
+          inset 4px 4px 8px rgba(0, 0, 0, 0.5),
+          inset -2px -2px 8px rgba(255, 255, 255, 0.02);
+      }
+      .text-glow-orange {
+        text-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+      }
+      .nav-link-glow,
+      .nav-glow {
+        text-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+      }
+      .glass-nav {
+        background: rgba(13, 19, 34, 0.6);
+        backdrop-filter: blur(24px);
+      }
+      .project-img-container img.hover-gif {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .project-card:hover img.hover-gif {
+        opacity: 1;
+      }
+      .project-card:hover img.static-img {
+        opacity: 0;
+      }
+      .static-img {
+        transition: opacity 0.3s ease;
+      }
+      body {
+        background-color: #0d1322;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <div id="root"></div>
+
+    <script type="text/babel" data-presets="react,env">
+      const { useState, useEffect } = React;
+      const { createRoot } = ReactDOM;
+      const { HashRouter, Routes, Route, Link, useNavigate, useLocation } = window.ReactRouterDOM;
+
+      // --- Common Components ---
+
+      const Navbar = () => {
+        const location = useLocation();
+        const isActive = (path) => location.pathname === path;
+
+        return (
+          <nav className="fixed top-0 w-full z-50 glass-nav border-b border-white/5">
+            <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto h-20">
+              <Link to="/" className="flex items-center gap-4 group">
+                <div className="w-10 h-10 bg-primary-container flex items-center justify-center rounded-lg shadow-[0_0_15px_rgba(249,115,22,0.4)] group-hover:rotate-6 transition-transform">
+                  <span className="text-on-primary-container font-black text-xl font-headline">
+                    S
+                  </span>
+                </div>
+                <div className="hidden sm:block">
+                  <div className="text-lg font-black tracking-tight text-white font-headline leading-tight">
+                    SNORBIK
+                  </div>
+                  <div className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-bold">
+                    Tayier NIMAIT • IA & Automation
+                  </div>
+                </div>
+              </Link>
+
+              <div className="hidden lg:flex items-center space-x-8">
+                <Link
+                  to="/"
+                  className={`${isActive('/') ? 'text-primary-container nav-glow font-black' : 'text-slate-400 hover:text-white'} transition-all text-sm font-bold uppercase tracking-widest`}
+                >
+                  Accueil
+                </Link>
+                <Link
+                  to="/projects"
+                  className={`${isActive('/projects') ? 'text-primary-container nav-glow font-black' : 'text-slate-400 hover:text-white'} transition-all text-sm font-bold uppercase tracking-widest`}
+                >
+                  Projets
+                </Link>
+                <Link
+                  to="/about"
+                  className={`${isActive('/about') ? 'text-primary-container nav-glow font-black' : 'text-slate-400 hover:text-white'} transition-all text-sm font-bold uppercase tracking-widest`}
+                >
+                  À Propos
+                </Link>
+                <Link
+                  to="/cv"
+                  className={`${isActive('/cv') ? 'text-primary-container nav-glow font-black' : 'text-slate-400 hover:text-white'} transition-all text-sm font-bold uppercase tracking-widest`}
+                >
+                  Expertise
+                </Link>
+                <Link
+                  to="/contact"
+                  className={`${isActive('/contact') ? 'text-primary-container nav-glow font-black' : 'text-slate-400 hover:text-white'} transition-all text-sm font-bold uppercase tracking-widest`}
+                >
+                  Contact
+                </Link>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <button className="hidden md:flex bg-white/5 border border-white/10 text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-white/10 transition-all items-center gap-2">
+                  <span className="material-symbols-outlined text-sm">download</span>
+                  CV
+                </button>
+                <div className="h-10 w-10 rounded-full border-2 border-primary-container/30 p-[2px] overflow-hidden">
+                  <img
+                    alt="Profile"
+                    className="w-full h-full object-cover rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIP-NLQJx-Bu69H6vK2s3jchN7zsGtcQW0sJfyDXUjQbCxpMwssocUbLMYVGwQyc9z82TrFavoJDArHVoqfkJwSMSIsuxOtWetWsDYobzpt2g_zKWpfKCVxsVj8nuIbv1M-kgT6nOqctCURGfzpnVhu8O4JgH47_XMMYNJ2HaQBZ6j3ne6LSXfUgPuaZ-MSjp4YOUUd4u__0TYPmxjWyhfZBIrsQEASpzUuGWEnAQHS7JN0hIjoSy17Oun3W4Y-aOkng9oeZQkJoE"
+                  />
+                </div>
+              </div>
+            </div>
+          </nav>
+        );
+      };
+
+      const Footer = () => (
+        <footer className="bg-[#0d1322] w-full py-12 border-t border-white/5">
+          <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+            <div className="flex flex-col items-center md:items-start">
+              <div className="font-headline font-bold text-primary-container text-xl mb-2">
+                SNORBIK
+              </div>
+              <p className="font-body text-sm tracking-wide text-slate-500">
+                © 2024 SNORBIK | AI & Automation by Tayier NIMAIT
+              </p>
+            </div>
+            <div className="flex gap-8">
+              <a
+                className="text-slate-500 hover:text-primary-container transition-all font-body text-sm tracking-wide"
+                href="#"
+              >
+                LinkedIn
+              </a>
+              <a
+                className="text-slate-500 hover:text-primary-container transition-all font-body text-sm tracking-wide"
+                href="#"
+              >
+                GitHub
+              </a>
+              <a
+                className="text-slate-500 hover:text-primary-container transition-all font-body text-sm tracking-wide"
+                href="#"
+              >
+                Email
+              </a>
+              <a
+                className="text-slate-500 hover:text-primary-container transition-all font-body text-sm tracking-wide"
+                href="#"
+              >
+                Privacy
+              </a>
+            </div>
+          </div>
+        </footer>
+      );
+
+      // --- Screens ---
+
+      const HomePage = () => {
+        const navigate = useNavigate();
+        return (
+          <>
+            <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+              <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+              <div className="absolute top-1/2 -left-24 w-64 h-64 bg-secondary/10 rounded-full blur-[100px]"></div>
+              <div className="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-12 items-center">
+                <div className="z-10">
+                  <span className="text-secondary font-bold tracking-widest uppercase mb-4 block">
+                    Tayier NIMAIT — Expert Digital
+                  </span>
+                  <h1 className="text-6xl md:text-8xl font-black text-on-background leading-tight mb-6 font-headline">
+                    Développeur IA –{' '}
+                    <span className="text-primary-container text-glow-orange">Automation</span> et
+                    outils métier
+                  </h1>
+                  <p className="text-xl md:text-2xl text-on-surface-variant font-light mb-10 max-w-xl leading-relaxed">
+                    Je conçois des écosystèmes intelligents qui réduisent votre temps opérationnel
+                    jusqu'à 70%. Transformez vos processus complexes en flux de travail autonomes.
+                  </p>
+                  <div className="flex flex-wrap gap-6">
+                    <button
+                      onClick={() => navigate('/contact')}
+                      className="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-black text-lg morph-outset hover:scale-95 transition-all"
+                    >
+                      Lancer mon projet
+                    </button>
+                    <div
+                      className="flex items-center gap-4 group cursor-pointer"
+                      onClick={() => navigate('/projects')}
+                    >
+                      <div className="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center morph-outset group-hover:bg-secondary transition-colors">
+                        <span className="material-symbols-outlined text-secondary group-hover:text-on-secondary">
+                          play_arrow
+                        </span>
+                      </div>
+                      <span className="font-bold text-on-surface">Voir les projets</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative">
+                  <div className="morph-outset rounded-[3rem] p-4 bg-surface-container-low border border-white/5 relative z-10 overflow-hidden">
+                    <img
+                      alt="Abstract 3D digital visualization"
+                      className="rounded-[2.5rem] w-full h-[500px] object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuApmRGCoKbhSiin_WC57UxXcPr-Fz48b_sj86jUZNbJ7reLRcNJBGmGLj4HCmXjBywOcJI2SFz88hsbb0jKYLQ7Wxn1LCJQDiqqXFG5McGF9Tct4X0le1RweWtYGyPDYn4P4wFoW0-xF_r3gvMMUbGhsOshj4QmmnBIGSdIZBVEjEcyh0b1Qwftw-WsOWG6FDEyFcM62qGQHAWpBL-vp6Txa5MqvtcR7Ysg85C-7dCxZY2JBCNvQIzzWOHca2X1Cx8nEncaoJMuj-M"
+                    />
+                    <div className="absolute bottom-12 left-12 right-12 p-8 glass-nav rounded-2xl morph-outset border border-white/10">
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <div className="text-secondary font-bold text-sm uppercase">
+                            Gain de productivité
+                          </div>
+                          <div className="text-4xl font-black text-on-surface">+120%</div>
+                        </div>
+                        <div className="h-12 w-[2px] bg-white/10"></div>
+                        <div>
+                          <div className="text-primary-container font-bold text-sm uppercase">
+                            Temps économisé
+                          </div>
+                          <div className="text-4xl font-black text-on-surface">15h/sem</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Methodology Snapshot */}
+            <section className="py-20 max-w-7xl mx-auto px-6">
+              <div className="text-center mb-16">
+                <h2 className="font-headline text-5xl font-black text-on-background mb-4 uppercase tracking-tighter">
+                  Ma méthode
+                </h2>
+                <div className="w-24 h-1 bg-primary-container mx-auto"></div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="p-10 rounded-3xl bg-surface-container-low morph-card border-t border-white/5">
+                  <div className="w-14 h-14 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-8">
+                    <span className="material-symbols-outlined text-primary-container text-3xl">
+                      psychology
+                    </span>
+                  </div>
+                  <h4 className="font-headline text-2xl font-bold mb-4">01. Immersion</h4>
+                  <p className="text-slate-400 leading-relaxed">
+                    Analyse profonde de vos processus actuels pour identifier les goulots
+                    d'étranglement réels.
+                  </p>
+                </div>
+                <div className="p-10 rounded-3xl bg-surface-container-low morph-card border-t border-white/5">
+                  <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-8">
+                    <span className="material-symbols-outlined text-secondary text-3xl">
+                      terminal
+                    </span>
+                  </div>
+                  <h4 className="font-headline text-2xl font-bold mb-4">02. Engineering</h4>
+                  <p className="text-slate-400 leading-relaxed">
+                    Développement agile de solutions robustes. Focus sur l'interopérabilité des
+                    outils.
+                  </p>
+                </div>
+                <div className="p-10 rounded-3xl bg-surface-container-low morph-card border-t border-white/5">
+                  <div className="w-14 h-14 bg-tertiary-container/10 rounded-2xl flex items-center justify-center mb-8">
+                    <span className="material-symbols-outlined text-tertiary-container text-3xl">
+                      rocket_launch
+                    </span>
+                  </div>
+                  <h4 className="font-headline text-2xl font-bold mb-4">03. Impact</h4>
+                  <p className="text-slate-400 leading-relaxed">
+                    Déploiement, formation et mesure du ROI. Itération jusqu'à l'excellence.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </>
+        );
+      };
+
+      const ProjectsPage = () => (
+        <main className="pt-32 pb-20 max-w-7xl mx-auto px-6">
+          <header className="mb-20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest mb-6">
+              <span className="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+              <span className="text-xs font-bold tracking-widest text-secondary uppercase">
+                Portfolio 2024
+              </span>
+            </div>
+            <h1 className="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none mb-8 text-on-background">
+              Mes réalisations <br />
+              <span className="text-primary-container text-glow-orange">& cas concrets</span>
+            </h1>
+          </header>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Project 1 */}
+            <div className="morph-card bg-surface-container rounded-3xl overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq5fXtRQ5TWHxIrbeokvAEF1kYMPjmOoXlATvZpmtDluLGsaGizqS-NLNw1JDbHRjppBMJeEkCXU8bSeN5GJuVYkB9IS4kOlK90-WJjMwbXMAetSW-TUaFHVYlaGFdAZ0auUJvRWD287_c5cuCV1Hq3PDSAzIt0q_71p1m-wcMgprUMH5QjznpSVKqH34_Gds67pOAW54OX-pFJLc8JQu43tg9sKbZ7ASwOyMuxsIm0p5O3wgcQvr7rGX2Tp1S2SCwxAccSI_FpMI"
+                />
+                <div className="absolute top-4 right-4 bg-green-500/20 backdrop-blur-md border border-green-500/30 px-3 py-1 rounded-full">
+                  <span className="text-xs font-bold text-green-400 uppercase tracking-widest">
+                    Terminé
+                  </span>
+                </div>
+              </div>
+              <div className="p-8">
+                <span className="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block">
+                  Automation
+                </span>
+                <h3 className="font-headline text-3xl font-black text-on-surface mb-6">
+                  Data Pipeline Automation
+                </h3>
+                <div className="space-y-4">
+                  <p className="text-slate-400 italic">
+                    Collecte de données manuelle sur 12 sources, entraînant 15h de travail hebdo.
+                  </p>
+                  <div className="bg-surface-container-lowest p-5 rounded-2xl morph-inset border border-white/5">
+                    <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-1">
+                      Impact
+                    </p>
+                    <p className="text-2xl font-black text-on-surface">
+                      100% Automatisé{' '}
+                      <span className="text-secondary text-sm font-normal">(-15h/semaine)</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Project 2 */}
+            <div className="morph-card bg-surface-container rounded-3xl overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA14DBKmeYuJx2j2HcnE4FaOd9X-EJwPl3DT7_-_-k7_E09RXzmRUOL5VObx1JgPDrbox_0DB9XaDDQ_s4lEQyoEMk48IvMMRd2Gbb8QRRbdUSEDClt-hW9cnyyy6JRZaHGd0M8zW_IuNQzhybacdZ0qw24UPkjwi53OJw6sfhyHfTs0sKDwTgfgJcFpE2p29z6pvNK2yyKxLux1VEZTFN9GsnRihFKFqTaeXLxfJ8JMrNafCXgLuZ959IxSvsiMX9YS-A8ezk8gVI"
+                />
+                <div className="absolute top-4 right-4 bg-green-500/20 backdrop-blur-md border border-green-500/30 px-3 py-1 rounded-full">
+                  <span className="text-xs font-bold text-green-400 uppercase tracking-widest">
+                    Terminé
+                  </span>
+                </div>
+              </div>
+              <div className="p-8">
+                <span className="text-secondary font-bold text-sm tracking-widest uppercase mb-4 block">
+                  IA
+                </span>
+                <h3 className="font-headline text-3xl font-black text-on-surface mb-6">
+                  AI Business Assistant
+                </h3>
+                <div className="space-y-4">
+                  <p className="text-slate-400 italic">
+                    Agent RAG utilisant GPT-4o pour répondre aux requêtes internes RH et Tech.
+                  </p>
+                  <div className="bg-surface-container-lowest p-5 rounded-2xl morph-inset border border-white/5">
+                    <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-1">
+                      Impact
+                    </p>
+                    <p className="text-2xl font-black text-on-surface">
+                      75% Résolution{' '}
+                      <span className="text-secondary text-sm font-normal">en autonomie</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      );
+
+      const AboutPage = () => (
+        <main className="pt-32 pb-20 px-8 max-w-7xl mx-auto space-y-32">
+          <section className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-7 space-y-8">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-surface-container-highest text-secondary font-bold text-sm tracking-widest uppercase">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                </span>
+                Mission Ready: AI & Automation
+              </div>
+              <h1 className="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none">
+                Tayier <span className="text-orange-500 text-glow-orange">NIMAIT</span>
+              </h1>
+              <p className="text-on-surface-variant text-xl leading-relaxed max-w-xl font-light">
+                Architecte de l'efficacité, mariant la précision de la médecine à la logique du
+                design logiciel.
+              </p>
+              <div className="flex flex-wrap gap-6 pt-4">
+                <div className="morph-card bg-surface-container p-6 rounded-xl border-l-4 border-orange-500 flex-1 min-w-[200px]">
+                  <div className="text-orange-500 font-headline font-bold text-3xl">Bac +5</div>
+                  <div className="text-on-surface-variant text-sm uppercase tracking-widest mt-1">
+                    Médecine Clinique
+                  </div>
+                </div>
+                <div className="morph-card bg-surface-container p-6 rounded-xl border-l-4 border-secondary flex-1 min-w-[200px]">
+                  <div className="text-secondary font-headline font-bold text-3xl">Bac +3</div>
+                  <div className="text-on-surface-variant text-sm uppercase tracking-widest mt-1">
+                    Software Design
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="md:col-span-5 relative">
+              <div className="absolute -inset-4 bg-gradient-to-tr from-primary-container/20 to-secondary/20 blur-3xl opacity-30 rounded-full"></div>
+              <div className="morph-card rounded-2xl overflow-hidden relative z-10 aspect-[4/5]">
+                <img
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIP-NLQJx-Bu69H6vK2s3jchN7zsGtcQW0sJfyDXUjQbCxpMwssocUbLMYVGwQyc9z82TrFavoJDArHVoqfkJwSMSIsuxOtWetWsDYobzpt2g_zKWpfKCVxsVj8nuIbv1M-kgT6nOqctCURGfzpnVhu8O4JgH47_XMMYNJ2HaQBZ6j3ne6LSXfUgPuaZ-MSjp4YOUUd4u__0TYPmxjWyhfZBIrsQEASpzUuGWEnAQHS7JN0hIjoSy17Oun3W4Y-aOkng9oeZQkJoE"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section className="space-y-16">
+            <h2 className="font-headline text-4xl font-bold tracking-tight text-center">
+              Évolution de Carrière
+            </h2>
+            <div className="relative max-w-4xl mx-auto px-4">
+              <div className="absolute left-1/2 top-0 bottom-0 w-px bg-surface-container-highest -translate-x-1/2 hidden md:block"></div>
+              <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 items-center">
+                <div className="md:text-right space-y-2">
+                  <div className="text-orange-500 font-headline font-bold">2018 - 2023</div>
+                  <h4 className="text-xl font-bold">Expertise Médicale</h4>
+                  <p className="text-on-surface-variant">
+                    Validation Bac+5, développement de la rigueur analytique.
+                  </p>
+                </div>
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-500 border-4 border-surface shadow-[0_0_15px_rgba(249,115,22,0.8)] hidden md:block"></div>
+              </div>
+              <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="hidden md:block"></div>
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-surface shadow-[0_0_15px_rgba(6,182,212,0.8)] hidden md:block"></div>
+                <div className="space-y-2">
+                  <div className="text-secondary font-headline font-bold">Aujourd'hui</div>
+                  <h4 className="text-xl font-bold">SNORBIK</h4>
+                  <p className="text-on-surface-variant">
+                    Synthèse des compétences en IA et automatisation stratégique.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      );
+
+      const CVPage = () => (
+        <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+          <section className="mb-32">
+            <h2 className="text-4xl font-black font-headline mb-12 flex items-center gap-4">
+              <span className="text-secondary">01.</span> Arsenal Technique
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              <div className="md:col-span-2 morph-card p-8 rounded-3xl flex flex-col justify-between">
+                <div className="w-14 h-14 morph-inset rounded-2xl flex items-center justify-center text-primary-container mb-6">
+                  <span className="material-symbols-outlined text-4xl">psychology</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">IA & Machine Learning</h3>
+                  <p className="text-on-surface-variant text-sm">
+                    Deep Learning, Transformers, Orchestration LLM.
+                  </p>
+                </div>
+              </div>
+              <div className="md:col-span-1 morph-card p-8 rounded-3xl flex flex-col items-center justify-center text-center">
+                <div className="text-4xl font-black text-secondary mb-4 font-headline">Python</div>
+                <div className="w-full h-1.5 morph-inset rounded-full overflow-hidden">
+                  <div className="bg-secondary h-full w-[95%]"></div>
+                </div>
+              </div>
+              <div className="md:col-span-3 lg:col-span-3 morph-card p-8 rounded-3xl group">
+                <h3 className="text-3xl font-black mb-6 text-glow-cyan">
+                  Workflows d'automatisation
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  <span className="px-5 py-2 morph-inset rounded-xl text-secondary font-bold">
+                    Zapier
+                  </span>
+                  <span className="px-5 py-2 morph-inset rounded-xl text-secondary font-bold">
+                    Make.com
+                  </span>
+                  <span className="px-5 py-2 morph-inset rounded-xl text-secondary font-bold">
+                    n8n
+                  </span>
+                  <span className="px-5 py-2 morph-inset rounded-xl text-secondary font-bold">
+                    LangChain
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-4xl font-black font-headline mb-12 flex items-center gap-4">
+                <span className="text-primary-container">02.</span> Expérience
+              </h2>
+              <div className="space-y-8">
+                <div className="relative pl-8 border-l border-white/5 group">
+                  <div className="absolute -left-[5px] top-0 w-2.5 h-2.5 rounded-full bg-primary-container"></div>
+                  <span className="text-sm text-secondary font-bold uppercase mb-2 block">
+                    Présent
+                  </span>
+                  <h3 className="text-2xl font-bold mb-1">AI Automation Developer</h3>
+                  <p className="text-on-surface-variant mb-4">SNORBIK Labs</p>
+                  <p className="text-on-surface-variant text-sm">
+                    Systèmes d'agents autonomes pour réduire les coûts opérationnels de 40%.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-4xl font-black font-headline mb-12 flex items-center gap-4">
+                <span className="text-secondary">03.</span> Éducation
+              </h2>
+              <div className="morph-card p-6 rounded-3xl border-l-4 border-secondary">
+                <h3 className="text-xl font-black">Expert IA - RNCP 7</h3>
+                <p className="text-secondary font-bold">Spécialisation Réseaux de Neurones</p>
+                <p className="text-on-surface-variant text-sm mt-4">
+                  Certification de niveau Master focalisée sur les architectures avancées.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      );
+
+      const ContactPage = () => (
+        <main className="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+          <section className="mb-20">
+            <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 border-l-4 border-primary pl-8">
+              <div className="max-w-2xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                  </span>
+                  <span className="text-secondary font-label uppercase tracking-widest text-xs font-bold">
+                    Disponible
+                  </span>
+                </div>
+                <h1 className="font-headline text-5xl md:text-7xl font-black leading-tight text-on-background tracking-tighter uppercase">
+                  Parlons de votre <span className="text-primary text-glow">besoin</span>
+                </h1>
+              </div>
+            </div>
+          </section>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-5 space-y-8">
+              <div className="morph-card bg-surface-container-high p-8 rounded-xl border-t border-white/5">
+                <h3 className="font-headline text-xl mb-6">Coordonnées Directes</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center p-4 rounded-xl bg-surface-container-lowest morph-inset">
+                    <div className="h-12 w-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container mr-4">
+                      <span className="material-symbols-outlined">mail</span>
+                    </div>
+                    <div>
+                      <p className="text-xs text-on-surface-variant uppercase font-bold">Email</p>
+                      <p className="text-on-surface font-semibold">contact@snorbik.ai</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="morph-card bg-surface-container p-8 md:p-12 rounded-xl">
+                <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-3">
+                      <label className="text-sm font-bold uppercase text-on-surface-variant ml-2">
+                        Nom Complet
+                      </label>
+                      <input
+                        className="w-full bg-surface-container-lowest border-none morph-inset rounded-xl p-4 text-on-surface"
+                        placeholder="Alex Dupont"
+                        type="text"
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <label className="text-sm font-bold uppercase text-on-surface-variant ml-2">
+                        Email
+                      </label>
+                      <input
+                        className="w-full bg-surface-container-lowest border-none morph-inset rounded-xl p-4 text-on-surface"
+                        placeholder="alex@exemple.com"
+                        type="email"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <label className="text-sm font-bold uppercase text-on-surface-variant ml-2">
+                      Message
+                    </label>
+                    <textarea
+                      className="w-full bg-surface-container-lowest border-none morph-inset rounded-xl p-4 text-on-surface resize-none"
+                      placeholder="Parlez-moi de votre projet..."
+                      rows="6"
+                    ></textarea>
+                  </div>
+                  <button className="w-full md:w-auto px-12 py-5 bg-gradient-to-br from-primary-container to-orange-700 text-on-primary-container font-headline font-black text-xl uppercase morph-outset rounded-xl flex items-center justify-center gap-3">
+                    Envoyer le message
+                    <span className="material-symbols-outlined">send</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </main>
+      );
+
+      // --- App Entry Point ---
+
+      const App = () => {
+        return (
+          <HashRouter>
+            <div className="min-h-screen flex flex-col">
+              <Navbar />
+              <div className="flex-grow">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/projects" element={<ProjectsPage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/cv" element={<CVPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                </Routes>
+              </div>
+              <Footer />
+            </div>
+          </HashRouter>
+        );
+      };
+
+      const root = createRoot(document.getElementById('root'));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

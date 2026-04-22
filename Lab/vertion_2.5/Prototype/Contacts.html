@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Snorbik AI Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;600;800;900&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#acedff",
+                    "background": "#0d1322",
+                    "outline-variant": "#584237",
+                    "on-background": "#dde2f8",
+                    "on-tertiary-fixed-variant": "#6700b5",
+                    "tertiary-fixed": "#efdbff",
+                    "on-tertiary-fixed": "#2c0051",
+                    "on-tertiary": "#480081",
+                    "outline": "#a78b7d",
+                    "surface-dim": "#0d1322",
+                    "surface-bright": "#33394a",
+                    "on-secondary-container": "#00424e",
+                    "inverse-on-surface": "#2a3040",
+                    "surface-container-high": "#242a3a",
+                    "on-primary-fixed-variant": "#783200",
+                    "inverse-surface": "#dde2f8",
+                    "surface-container-highest": "#2f3445",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "error": "#ffb4ab",
+                    "secondary": "#06B6D4",
+                    "on-primary-fixed": "#341100",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#dcb8ff",
+                    "surface-container-lowest": "#080e1d",
+                    "surface-container-low": "#151b2b",
+                    "primary": "#F97316",
+                    "surface-tint": "#ffb690",
+                    "inverse-primary": "#9d4300",
+                    "primary-fixed-dim": "#ffb690",
+                    "surface": "#0d1322",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "primary-container": "#f97316",
+                    "surface-variant": "#2f3445",
+                    "on-surface": "#dde2f8",
+                    "on-primary-container": "#582200",
+                    "on-error": "#690005",
+                    "surface-container": "#191f2f",
+                    "on-secondary-fixed": "#001f26",
+                    "tertiary-container": "#bc7cff",
+                    "tertiary": "#dcb8ff",
+                    "secondary-container": "#03b5d3",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#e0c0b1",
+                    "on-tertiary-container": "#4b0085",
+                    "on-primary": "#552100",
+                    "primary-fixed": "#ffdbca",
+                    "on-secondary": "#003640"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .morph-card {
+            background: #151b2b;
+            box-shadow: 6px 6px 12px rgba(0,0,0,0.4), -4px -4px 12px rgba(255,255,255,0.02);
+        }
+        .morph-card-inset {
+            background: #080e1d;
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.5), inset -2px -2px 8px rgba(255,255,255,0.02);
+        }
+        .morph-button {
+            background: linear-gradient(135deg, #F97316 0%, #D97706 100%);
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.3), -2px -2px 10px rgba(255,255,255,0.05);
+        }
+        .morph-button:active {
+            transform: scale(0.98);
+            box-shadow: inset 4px 4px 8px rgba(0,0,0,0.3);
+        }
+        .tonal-shift-bg-slate-900\/50 {
+            background: rgba(13, 19, 34, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0d1322]/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/5">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white uppercase font-['Epilogue']">
+                Snorbik
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Epilogue'] tracking-tight">
+<a class="text-slate-400 hover:text-white transition-colors hover:bg-white/5 rounded-lg px-3 py-2" href="#">Expérience</a>
+<a class="text-slate-400 hover:text-white transition-colors hover:bg-white/5 rounded-lg px-3 py-2" href="#">Projets</a>
+<a class="text-slate-400 hover:text-white transition-colors hover:bg-white/5 rounded-lg px-3 py-2" href="#">Compétences</a>
+<a class="text-orange-500 font-semibold border-b-2 border-orange-500 pb-1" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex gap-2 text-slate-400">
+<button class="p-2 hover:bg-white/5 rounded-lg transition-all"><span class="material-symbols-outlined">terminal</span></button>
+<button class="p-2 hover:bg-white/5 rounded-lg transition-all"><span class="material-symbols-outlined">share</span></button>
+</div>
+<button class="bg-primary px-6 py-2 rounded-lg text-on-primary-container font-semibold hover:opacity-90 transition-all text-sm uppercase tracking-widest">
+                    Télécharger CV
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto min-h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Intro Section (Asymmetric Editorial Layout) -->
+<section class="lg:col-span-5 space-y-8">
+<div>
+<span class="inline-block px-4 py-1 rounded-full bg-surface-container-high text-secondary text-xs font-bold tracking-widest uppercase mb-4">
+                        Prêt pour l'automatisation ?
+                    </span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter">
+                        L'Atelier <span class="text-primary italic">Snorbik</span> est ouvert.
+                    </h1>
+</div>
+<p class="text-xl text-on-surface-variant/80 font-light leading-relaxed max-w-md">
+                    Transformez vos processus complexes en flux élégants et automatisés. Commençons la discussion aujourd'hui.
+                </p>
+<div class="space-y-6 pt-4">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-xl morph-card flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Email Direct</p>
+<a class="text-lg text-white hover:text-secondary transition-colors" href="mailto:contact@snorbik.ai">contact@snorbik.ai</a>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-xl morph-card flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">alternate_email</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Connectons-nous</p>
+<div class="flex gap-4">
+<a class="text-white hover:text-primary transition-colors font-medium" href="#">LinkedIn</a>
+<a class="text-white hover:text-primary transition-colors font-medium" href="#">GitHub</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 rounded-2xl bg-surface-container-low border-l-4 border-primary/40 mt-8">
+<p class="text-on-surface text-sm italic font-medium">
+                        "Réponse rapide garantie pour vos besoins d'automatisation"
+                    </p>
+</div>
+</section>
+<!-- Contact Form Section (Morph-Card) -->
+<section class="lg:col-span-7">
+<div class="morph-card p-8 md:p-12 rounded-[2rem] relative overflow-hidden">
+<!-- Subtle Glow Detail -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full"></div>
+<form action="#" class="space-y-8 relative z-10" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-widest px-1">Nom</label>
+<input class="w-full morph-card-inset border-none rounded-xl px-6 py-4 text-white focus:ring-2 focus:ring-secondary/50 placeholder:text-slate-600 transition-all" placeholder="Jean Dupont" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-widest px-1">Email</label>
+<input class="w-full morph-card-inset border-none rounded-xl px-6 py-4 text-white focus:ring-2 focus:ring-secondary/50 placeholder:text-slate-600 transition-all" placeholder="jean@entreprise.fr" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold text-slate-400 uppercase tracking-widest px-1">Message</label>
+<textarea class="w-full morph-card-inset border-none rounded-xl px-6 py-4 text-white focus:ring-2 focus:ring-secondary/50 placeholder:text-slate-600 transition-all" placeholder="Parlez-moi de votre projet d'automatisation..." rows="6"></textarea>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4">
+<div class="flex items-center gap-2 text-slate-500 text-xs uppercase tracking-tighter">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
+                                Données traitées avec confidentialité
+                            </div>
+<button class="morph-button w-full md:w-auto px-10 py-4 rounded-xl text-white font-bold uppercase tracking-widest flex items-center justify-center gap-3 transition-all hover:scale-[1.02]" type="submit">
+                                Envoyer le Message
+                                <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Featured Success Bento-ish Stat -->
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="morph-card p-6 rounded-2xl flex items-center gap-4">
+<div class="text-3xl font-black text-primary">24h</div>
+<div class="text-[10px] leading-tight text-slate-500 uppercase tracking-widest">Temps de réponse<br/>moyen constaté</div>
+</div>
+<div class="morph-card p-6 rounded-2xl flex items-center gap-4">
+<div class="text-3xl font-black text-secondary">100%</div>
+<div class="text-[10px] leading-tight text-slate-500 uppercase tracking-widest">Confidentialité<br/>des données assurée</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0d1322] w-full py-12 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-6">
+<div class="font-['Epilogue'] font-black text-orange-500 text-xl tracking-tighter">
+                SNORBIK
+            </div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors" href="#">LinkedIn</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors" href="#">GitHub</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors" href="#">Twitter</a>
+<a class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors" href="#">Email</a>
+</div>
+<p class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500">
+                © 2024 Snorbik AI Atelier. Tous droits réservés.
+            </p>
+</div>
+</footer>
+</body></html>
