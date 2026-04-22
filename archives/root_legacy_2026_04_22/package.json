@@ -1,7 +1,7 @@
 {
-  "name": "snorbik-react-conversion",
+  "name": "bio-inspired-portfolio-v2-4",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.4.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,7 @@
     "react-dom": "^19.2.3"
   },
   "devDependencies": {
+    "@types/node": "^22.14.0",
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.0.0",

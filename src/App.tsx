@@ -1,223 +1,15 @@
 import { useEffect, useMemo, useState } from 'react';
-import { SiteFooter } from './components/SiteFooter';
-import { SiteHeader } from './components/SiteHeader';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
+import { AboutPage } from './pages/AboutPage';
 import { CvPage } from './pages/CvPage';
-import type { PageKey, PortfolioData } from './types';
+import { ContactPage } from './pages/ContactPage';
+import type { PageKey } from './types';
 
-const defaultData: PortfolioData = {
-  site: {
-    name: 'Tayier NIMAIT',
-    role: 'Développeur Python & IA appliquée',
-    tagline: 'Je transforme des besoins métier en outils simples et fiables.',
-    description:
-      "J'automatise des tâches, je structure des workflows et je crée des outils utiles pour faire gagner du temps aux équipes et réduire les erreurs.",
-    ctaPrimary: 'Voir mes projets',
-    ctaSecondary: 'Me contacter',
-    availability: 'Disponible pour missions, contrat et alternance IA',
-    location: 'Basé en France',
-    responseTime: 'Réponse rapide',
-  },
-  highlights: [
-    {
-      label: 'Focus',
-      value: 'Python + IA',
-      note: 'Automatisation, orchestration, prototypes utiles',
-    },
-    {
-      label: 'Positionnement',
-      value: 'Automatisation métier',
-      note: 'Je transforme un besoin métier en solution livrable',
-    },
-    {
-      label: 'Mode de travail',
-      value: 'Avec IA, mais rigoureux',
-      note: 'Je gagne en vitesse sans perdre le contrôle',
-    },
-  ],
-  valueCards: [
-    {
-      title: 'Automatisation',
-      description: "J'automatise vos tâches répétitives et vos process métiers pour gagner du temps et réduire les erreurs.",
-      icon: 'robot',
-    },
-    {
-      title: 'Données & Dashboards',
-      description: 'Je transforme vos données en tableaux de bord clairs et interactifs pour décider plus vite.',
-      icon: 'chart',
-    },
-    {
-      title: 'Intégration IA',
-      description: "J'intègre l'intelligence artificielle dans vos outils pour améliorer vos workflows et créer de la valeur.",
-      icon: 'brain',
-    },
-    {
-      title: 'Outils sur mesure',
-      description:
-        "Je développe des applications et outils internes adaptés à vos besoins spécifiques et à votre environnement.",
-      icon: 'tools',
-    },
-  ],
-  heroStats: [
-    { label: 'Tâches automatisées', value: '128', delta: '+32%' },
-    { label: 'Temps gagné', value: '320h', delta: '+18%' },
-    { label: 'Erreurs réduites', value: '97%', delta: '+24%' },
-    { label: 'Process actifs', value: '24', delta: '+12%' },
-  ],
-  heroActions: [
-    { label: 'Import & Clean Data', status: 'Succès' },
-    { label: 'Analyse ventes', status: 'Succès' },
-    { label: 'Rapport automatique', status: 'En cours' },
-    { label: 'Notification client', status: 'Succès' },
-  ],
-  skills: [
-    { label: 'Python', score: 95 },
-    { label: 'IA appliquée', score: 88 },
-    { label: 'Outils métier', score: 84 },
-    { label: 'React', score: 78 },
-  ],
-  projects: [
-    {
-      title: "Pipeline d'automatisation des données",
-      domain: 'Automatisation',
-      summary: "Automatisation complète d'un pipeline d'import, nettoyage et enrichissement de données.",
-      stack: ['Python', 'Pandas', 'Airflow', 'PostgreSQL'],
-      problem: 'Les équipes perdaient du temps sur des imports manuels et des contrôles répétitifs.',
-      solution: "J'ai conçu un pipeline automatisé pour fiabiliser le traitement des données.",
-      result: 'Moins d’erreurs, traitement plus rapide et base exploitable plus vite.',
-    },
-    {
-      title: 'Dashboard analytique commercial',
-      domain: 'Dashboard',
-      summary: 'Tableau de bord pour suivre les ventes, KPI et performance en temps réel.',
-      stack: ['React', 'Recharts', 'Node.js', 'MongoDB'],
-      problem: 'Les indicateurs commerciaux étaient dispersés dans plusieurs fichiers et outils.',
-      solution: "J'ai construit une interface lisible avec vues synthétiques et suivi des tendances.",
-      result: 'Lecture plus rapide des indicateurs et meilleure prise de décision.',
-    },
-    {
-      title: 'Assistant IA pour support client',
-      domain: 'IA / NLP',
-      summary: 'Assistant intelligent qui répond aux questions clients et automatise les réponses courantes.',
-      stack: ['Python', 'FastAPI', 'OpenAI API', 'PostgreSQL'],
-      problem: 'Le support passait trop de temps sur les mêmes questions récurrentes.',
-      solution: "J'ai intégré un assistant IA avec des réponses guidées et une logique de validation.",
-      result: 'Gain de temps sur le support et réponses plus homogènes.',
-    },
-  ],
-  missionReady: [
-    'Développement d’outils internes sur mesure',
-    'Automatisation de processus métiers',
-    'Intégration de l’IA dans vos applications',
-    'Analyse de données et création de dashboards',
-    'Accompagnement technique de A à Z',
-  ],
-  techStack: ['Python', 'React', '.NET', 'FastAPI', 'SQL', 'PostgreSQL', 'MongoDB', 'Docker', 'Git', 'Linux'],
-  contact: {
-    headline: 'Un projet en tête ? Discutons-en !',
-    description: 'Je suis disponible pour des missions, alternances ou collaborations orientées IA et automatisation.',
-    email: 'ntparis9@gmail.com',
-    github: 'https://github.com/developer-ta',
-    linkedin: 'https://www.linkedin.com/in/tayier-dev-ai-data/',
-  },
-  about: {
-    intro: 'Je construis des outils utiles pour automatiser, structurer et accélérer le travail des équipes.',
-    background:
-      "Mon parcours combine informatique, médecine et conception logicielle. J'ai appris à travailler vite sans perdre la rigueur.",
-    approach:
-      "Je privilégie les solutions simples, documentées et orientées résultat. L'IA est un accélérateur, pas un slogan.",
-    lookingFor: 'Je cherche des missions, un contrat ou une alternance IA où je peux être utile rapidement.',
-  },
-  cv: {
-    title: 'CV / Parcours',
-    intro: 'Une vue condensée de mon arsenal technique, de mon expérience et de ma formation.',
-    summary:
-      "Je mets en avant la combinaison entre IA, automatisation et produit utile. L'objectif est simple: livrer des systèmes clairs, fiables et mesurables.",
-    skillFocus: [
-      {
-        title: 'IA & Machine Learning',
-        description: 'Deep learning, LLM, orchestration et intégration de briques IA dans des produits concrets.',
-        highlight: 'Orchestration IA',
-      },
-      {
-        title: 'Python & Data',
-        description: 'Pipelines, traitement de données, automatisation métier et structuration d’outils internes.',
-        highlight: 'Python Core',
-      },
-      {
-        title: 'Automatisation',
-        description: 'Workflows multi-étapes, réduction des tâches répétitives et intégration dans les process métier.',
-        highlight: 'Workflow Design',
-      },
-      {
-        title: 'Produit & Interface',
-        description: 'Dashboards, interfaces lisibles et mise en scène claire de la valeur technique.',
-        highlight: 'Clarté visuelle',
-      },
-    ],
-    experience: [
-      {
-        period: 'Présent',
-        role: 'AI Automation Developer',
-        company: 'SNORBIK Labs',
-        summary:
-          'Conception de systèmes d’automatisation et de prototypes IA orientés efficacité opérationnelle.',
-      },
-      {
-        period: '2025',
-        role: 'Développeur IA & Automatisation',
-        company: 'Portfolio personnel',
-        summary:
-          'Création d’un portfolio axé recrutement, avec valorisation de projets, de compétences et de cas d’usage.',
-      },
-    ],
-    education: [
-      {
-        title: 'Expert IA - RNCP 7',
-        subtitle: 'Spécialisation réseaux de neurones',
-        summary: 'Formation orientée architectures avancées, IA appliquée et mise en pratique des systèmes intelligents.',
-      },
-      {
-        title: 'Parcours pluridisciplinaire',
-        subtitle: 'Médecine + informatique',
-        summary:
-          'Un socle de rigueur analytique, d’organisation et de sens des responsabilités appliqué à la tech.',
-      },
-    ],
-  },
-};
-
-function App() {
-  const [data, setData] = useState<PortfolioData>(defaultData);
+export default function App() {
   const [currentPage, setCurrentPage] = useState<PageKey>('home');
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    const controller = new AbortController();
-
-    fetch('/portfolio-data.json', { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to load portfolio data.');
-        }
-        return response.json() as Promise<PortfolioData>;
-      })
-      .then((json) => {
-        setData(json);
-        setIsReady(true);
-      })
-      .catch((error) => {
-        if (error instanceof DOMException && error.name === 'AbortError') {
-          return;
-        }
-        setIsReady(true);
-      });
-
-    return () => controller.abort();
-  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -226,30 +18,24 @@ function App() {
   const page = useMemo(() => {
     switch (currentPage) {
       case 'projects':
-        return <ProjectsPage data={data} onNavigate={setCurrentPage} />;
+        return <ProjectsPage />;
       case 'about':
-        return <AboutPage data={data} onNavigate={setCurrentPage} />;
+        return <AboutPage />;
       case 'cv':
-        return <CvPage data={data} onNavigate={setCurrentPage} />;
+        return <CvPage />;
       case 'contact':
-        return <ContactPage data={data} onNavigate={setCurrentPage} />;
+        return <ContactPage />;
       case 'home':
       default:
-        return <HomePage data={data} onNavigate={setCurrentPage} />;
+        return <HomePage onNavigate={setCurrentPage} />;
     }
-  }, [currentPage, data]);
+  }, [currentPage]);
 
   return (
-    <div className="app-shell">
-      <div className="page-shell">
-        <SiteHeader data={data} currentPage={currentPage} onNavigate={setCurrentPage} />
-        <div key={currentPage} className="page-transition">
-          {isReady ? page : <div className="loading-state">Chargement du portfolio…</div>}
-        </div>
-        <SiteFooter data={data} currentPage={currentPage} onNavigate={setCurrentPage} />
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
+      <div className="flex-grow">{page}</div>
+      <Footer />
     </div>
   );
 }
-
-export default App;
