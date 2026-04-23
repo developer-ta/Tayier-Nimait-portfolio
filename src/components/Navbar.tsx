@@ -107,7 +107,7 @@ export function Navbar({ currentPage, onNavigate }: Props) {
             <img
               alt="Profile"
               className="w-full h-full rounded-full object-cover"
-              src="https://lh3.googleusercontent.com/a/ACg8ocL8IuD2J8J0X-q-6Z8eLpI-k9q-m6C1X1Q0W-U8K8-z=s96-c"
+              src="/tayier_photo_pro-job.jpg"
             />
           </div>
         </div>
