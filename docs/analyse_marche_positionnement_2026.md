@@ -139,7 +139,7 @@ Ton GitHub public montre un profil plus large que le portfolio actuel:
 
 Source publique:
 
-- [GitHub - developer-ta](https://github.com/developer-ta)
+- [GitHub - ta-dev-ai](https://github.com/ta-dev-ai)
 
 Ton profil Medium introduit une autre couche plus distinctive:
 
@@ -621,7 +621,7 @@ Puis, une fois la porte ouverte:
 
 ### Sources publiques consultées
 
-- [GitHub - developer-ta](https://github.com/developer-ta)
+- [GitHub - ta-dev-ai](https://github.com/ta-dev-ai)
 - [Medium - G-Genome article](https://medium.com/%40ntparis9/g-genome-how-i-solved-the-amnestic-agent-problem-using-biology-a313d8904daa)
 - [France Travail - IA : les métiers qui recrutent le plus dès 2025](https://www.francetravail.fr/actualites/le-dossier/les-metiers-de-demain/ia-les-metiers-qui-recrutent-le.html)
 - [France Travail - Développeur Data & IA](https://candidat.francetravail.fr/offres/recherche/detail/206QMRT)
