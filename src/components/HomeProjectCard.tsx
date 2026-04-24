@@ -72,10 +72,8 @@ export function HomeProjectCard({
 
       {/* CONTENU PLUS COMPACT EN DESSOUS (Sans problème/solution) */}
       <div className="p-5 md:p-6 flex flex-col flex-grow bg-surface-container justify-between">
-        {/* SUBTITLE */}
-        {subtitle && (
-          <p className="text-sm text-slate-300 font-medium mb-6 leading-snug">{subtitle}</p>
-        )}
+        {/* EXPLICATION (1 ligne sous l'image) */}
+        {subtitle && <p className="text-base text-slate-200 mb-6 leading-relaxed">{subtitle}</p>}
 
         <div className="flex-grow" />
 
