@@ -78,15 +78,24 @@ export const homeData = {
       impactValue: '-40% tickets support',
     },
   ],
-  ongoing: {
-    title: 'Agent IA Workflows',
-    status: 'EN COURS',
-    description:
-      "Développement d'une flotte d'agents IA autonomes capables de gérer l'intégralité du cycle de facturation, de la réception du bon de commande à la relance client.",
-    tags: ['AutoGPT', 'n8n', 'Vector DB'],
-    progressLabel: 'Progression du Beta',
-    progressValue: '85%',
-  },
+  activeProjects: [
+    {
+      status: 'Version active',
+      statusColor: 'orange' as const,
+      title: 'Agent IA Workflow Métier',
+      staticImage:
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuBMqdQMiB7nxBaUbzge2DhlpPFYRZSMlJbcVfkwST7pBdCK-HovJqygJtajaUKBJ4CavYnenpuf4amcZoYh0bCaFUnXQdTYlGEHZNfGpFAdpKC9uFJW4foOcEUtoKZ8gjLDQhJt4GK0aXlwf8TJvkHvLiD7iES-0elOAfsJYjmgyb29-KT-SmagiKjX78ndxKhCz5CHyCPzy6NKSd1wYXuq_FtDEDLbV4YBYk07zU5cC-K2lI5XJ4sXFKEIVftqdxUCptBiBmc-UZc',
+      hoverImage:
+        'https://lh3.googleusercontent.com/aida-public/AB6AXuD42SabWUeHhpTO1cSFRfi1Myvavqq9B9pf49ZHmIlaoPOAd6pN6A_-b6t5ZFnnF0NEhHqMG2qhYbUc2WA1ZlYgp8PqePzSZ1mx7ODJu7CZqm8VK8J4leTWttFlCtgShnz0gNTEWH5NzD6Qs_ddfxKGWqgyE3bSSGXlKZbQ544vAnAT_DebQd2GTY8teWTqEFmdSKf8kpJc5ahEwxndHRsksdZEa5oVOAWEueUyeytosUrhr1P02hrmw_ImeNnOErIDOnxbEtLVABU',
+      staticAlt: 'Agent IA Workflows',
+      hoverAlt: 'Workflow architecture',
+      icon: 'precision_manufacturing',
+      problem: 'Cycle de facturation et relance client entièrement manuels et lents.',
+      currentSolution: 'Module de lecture automatique des bons de commande via Vision LLM.',
+      currentImpact: '-50% temps de saisie',
+      nextStep: 'Déploiement des agents de relance mail autonomes',
+    },
+  ],
   methodTitle: 'Ma Méthode',
   methodSubtitle:
     'Un processus rigoureux pour transformer vos idées en solutions robustes et évolutives.',

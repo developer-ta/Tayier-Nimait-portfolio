@@ -1,6 +1,7 @@
 import type { PageKey } from '../types';
 import { homeData } from '../data/pages/homeData';
 import { HomeProjectCard } from '../components/HomeProjectCard';
+import { ActiveProjectCard } from '../components/ActiveProjectCard';
 import { MethodCard } from '../components/MethodCard';
 import { SEO } from '../components/SEO';
 
@@ -129,41 +130,34 @@ export function HomePage({ onNavigate }: Props) {
             ))}
           </div>
 
-          <div className="morph-outset bg-gradient-to-r from-surface-container-low to-surface-container-high rounded-[2rem] p-12 border border-white/5 relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-8">
-              <span className="flex items-center gap-2 bg-primary-container text-on-primary-container px-4 py-2 rounded-full text-xs font-black animate-pulse">
-                <span className="w-2 h-2 rounded-full bg-white" />
-                {homeData.ongoing.status}
-              </span>
-            </div>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-4xl font-black mb-6 italic">{homeData.ongoing.title}</h3>
-                <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
-                  {homeData.ongoing.description}
-                </p>
-                <div className="flex gap-4">
-                  {homeData.ongoing.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-4 py-2 bg-surface-container-highest rounded-lg text-sm font-bold"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="morph-inset bg-surface-container-lowest rounded-2xl p-6 border border-white/5">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="font-bold text-secondary">{homeData.ongoing.progressLabel}</span>
-                  <span className="font-bold">{homeData.ongoing.progressValue}</span>
-                </div>
-                <div className="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-secondary to-primary-container w-[85%] rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
-                </div>
+          {/* SECTION MVP ACTIF */}
+          {homeData.activeProjects && homeData.activeProjects.length > 0 && (
+            <div className="mt-20">
+              <h3 className="text-3xl font-black mb-8 text-center flex items-center justify-center gap-3">
+                <span className="material-symbols-outlined text-orange-400">rocket_launch</span>
+                En cours de développement
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center max-w-md md:max-w-none mx-auto">
+                {homeData.activeProjects.map((card) => (
+                  <ActiveProjectCard
+                    key={card.title}
+                    status={card.status}
+                    statusColor={card.statusColor}
+                    title={card.title}
+                    staticImage={card.staticImage}
+                    hoverImage={card.hoverImage}
+                    staticAlt={card.staticAlt}
+                    hoverAlt={card.hoverAlt}
+                    icon={card.icon}
+                    problem={card.problem}
+                    currentSolution={card.currentSolution}
+                    currentImpact={card.currentImpact}
+                    nextStep={card.nextStep}
+                  />
+                ))}
               </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
 
