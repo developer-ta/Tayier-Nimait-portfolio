@@ -79,12 +79,14 @@ export function HomeProjectCard({
 
         {/* IMPACT UNIQUE MIS EN AVANT */}
         <div className="mb-6">
-          <div className="bg-secondary/10 px-4 py-3 rounded-xl border border-secondary/20 block">
-            <div className="text-[10px] uppercase font-black text-secondary tracking-widest leading-none mb-1 flex items-center gap-1.5 text-glow-orange">
-              <span className="text-sm leading-none">💥</span>
+          <div className="bg-[#00ffb4]/10 px-4 py-3 rounded-xl border border-[#00ffb4]/20 block morph-inset">
+            <div className="text-[10px] uppercase font-black text-[#00ffb4] tracking-widest leading-none mb-1 drop-shadow-[0_0_8px_rgba(0,255,180,0.5)]">
               {impactLabel}
             </div>
-            <div className="text-sm font-bold text-white leading-tight">{impactValue}</div>
+            <div className="text-base font-black text-white leading-tight flex items-center gap-2">
+              <span className="text-lg leading-none">💥</span>
+              <span>{impactValue}</span>
+            </div>
           </div>
         </div>
 

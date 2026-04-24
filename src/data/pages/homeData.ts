@@ -22,7 +22,7 @@ export const homeData = {
   projects: [
     {
       category: 'Outil Interne',
-      title: 'Dashboard de Facturation & Génération PDF',
+      title: 'Facturation automatisée & PDF',
       staticAlt: 'Interface facturation SaaS',
       hoverAlt: 'Génération PDF automatisée',
       staticImage:
@@ -33,15 +33,15 @@ export const homeData = {
       badgeBgClass: 'bg-secondary/20',
       badgeTextClass: 'text-secondary',
       badgeBorderClass: 'border-secondary/30',
-      subtitle: 'Automatisation de la gestion et facturation client',
+      subtitle: 'Automatisation facturation client',
       problem: "Gestion manuelle lente et risques d'erreurs fréquents (Excel).",
       solution: 'Dashboard React complet + pipeline IA + génération PDF automatisée.',
-      impactLabel: 'Impact Client',
-      impactValue: 'Factures en 2 clics • 0 erreur',
+      impactLabel: 'Impact',
+      impactValue: '-90% temps • 0 erreur',
     },
     {
       category: 'Dashboard',
-      title: 'Dashboard analytique commercial',
+      title: 'Pilotage performance commerciale',
       staticAlt: 'AI Interface',
       hoverAlt: 'AI thinking animation',
       staticImage:
@@ -52,15 +52,15 @@ export const homeData = {
       badgeBgClass: 'bg-primary-container/20',
       badgeTextClass: 'text-primary-container',
       badgeBorderClass: 'border-primary-container/30',
-      subtitle: 'Visualisation des performances business en temps réel',
+      subtitle: 'Dashboard business temps réel',
       problem: 'Données dispersées dans plusieurs fichiers et plateformes.',
       solution: 'Dashboard interactif avec agrégation et suivi intelligent des tendances.',
       impactLabel: 'Impact',
-      impactValue: 'Décisions accélérées et vue experte instantanée.',
+      impactValue: '+40% productivité',
     },
     {
       category: 'IA / NLP',
-      title: 'Assistant IA support client',
+      title: 'Automatisation support client IA',
       staticAlt: 'Data Analytics Dashboard',
       hoverAlt: 'Animated data visualization',
       staticImage:
@@ -71,11 +71,11 @@ export const homeData = {
       badgeBgClass: 'bg-tertiary/20',
       badgeTextClass: 'text-tertiary',
       badgeBorderClass: 'border-tertiary/30',
-      subtitle: 'Assistant intelligent pour répondre aux demandes clients',
+      subtitle: 'Réponses automatiques clients',
       problem: 'Support technique saturé par des questions basiques à faible valeur ajoutée.',
       solution: "Intégration d'un chatbot IA avec base vectorielle (RAG) et logique d'escalade.",
       impactLabel: 'Impact',
-      impactValue: 'Gain de temps massif + baisse de 40% des tickets de niveau 1.',
+      impactValue: '-40% tickets support',
     },
   ],
   ongoing: {
