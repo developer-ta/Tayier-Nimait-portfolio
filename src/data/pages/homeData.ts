@@ -33,12 +33,11 @@ export const homeData = {
       badgeBgClass: 'bg-secondary/20',
       badgeTextClass: 'text-secondary',
       badgeBorderClass: 'border-secondary/30',
-      problem:
-        "La gestion des clients et factures sur tableur faisait perdre des heures chaque semaine, avec un risque d'erreurs élevé.",
-      solution:
-        "Création d'un Dashboard React complet conçu grâce à un pipeline IA : base client, édition intelligente, statuts et génération PDF.",
+      subtitle: 'Automatisation complète de la gestion et facturation client',
+      problem: "Gestion manuelle lente et risques d'erreurs fréquents (Excel).",
+      solution: 'Dashboard React complet + pipeline IA + génération PDF automatisée.',
       impactLabel: 'Impact Client',
-      impactValue: 'Factures générées en 2 clics. Zéro erreur de calcul.',
+      impactValue: 'Factures en 2 clics — Zéro erreur',
     },
     {
       category: 'Dashboard',
@@ -53,15 +52,15 @@ export const homeData = {
       badgeBgClass: 'bg-primary-container/20',
       badgeTextClass: 'text-primary-container',
       badgeBorderClass: 'border-primary-container/30',
-      problem: 'Les indicateurs commerciaux étaient dispersés dans plusieurs fichiers et outils.',
-      solution:
-        "J'ai construit une interface lisible avec vues synthétiques et suivi des tendances.",
+      subtitle: 'Centralisation et visualisation des indicateurs business en temps réel',
+      problem: 'Données dispersées dans plusieurs fichiers et plateformes.',
+      solution: 'Dashboard interactif avec agrégation et suivi intelligent des tendances.',
       impactLabel: 'Impact',
-      impactValue: 'Lecture plus rapide des indicateurs.',
+      impactValue: 'Décisions accélérées et vue experte instantanée.',
     },
     {
       category: 'IA / NLP',
-      title: 'Assistant IA pour support client',
+      title: 'Assistant IA support client',
       staticAlt: 'Data Analytics Dashboard',
       hoverAlt: 'Animated data visualization',
       staticImage:
@@ -72,11 +71,11 @@ export const homeData = {
       badgeBgClass: 'bg-tertiary/20',
       badgeTextClass: 'text-tertiary',
       badgeBorderClass: 'border-tertiary/30',
-      problem: 'Le support passait trop de temps sur les mêmes questions récurrentes.',
-      solution:
-        "J'ai intégré un assistant IA avec des réponses guidées et une logique de validation.",
+      subtitle: 'Assistant intelligent pour filtrer et répondre aux questions récurrentes',
+      problem: 'Support technique saturé par des questions basiques à faible valeur ajoutée.',
+      solution: "Intégration d'un chatbot IA avec base vectorielle (RAG) et logique d'escalade.",
       impactLabel: 'Impact',
-      impactValue: 'Gain de temps sur le support.',
+      impactValue: 'Gain de temps massif + baisse de 40% des tickets de niveau 1.',
     },
   ],
   ongoing: {

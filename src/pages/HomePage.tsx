@@ -118,6 +118,7 @@ export function HomePage({ onNavigate }: Props) {
                 badgeBgClass={card.badgeBgClass}
                 badgeTextClass={card.badgeTextClass}
                 badgeBorderClass={card.badgeBorderClass}
+                subtitle={(card as any).subtitle || ''}
                 problem={card.problem}
                 solution={card.solution}
                 impactLabel={card.impactLabel}
