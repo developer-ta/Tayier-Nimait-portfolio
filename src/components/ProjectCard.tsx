@@ -9,7 +9,7 @@ type Props = {
   badgeBgClass: string;
   badgeTextClass: string;
   badgeBorderClass: string;
-  subtitle: string;
+  subtitle?: string;
   problem: string;
   solution: string;
   impactLabel: string;
@@ -60,14 +60,14 @@ export function ProjectCard({
         </div>
 
         {/* Titre et icône superposés en bas */}
-        <div className="absolute bottom-6 left-6 right-6 z-10">
-          <div className="flex items-end gap-3 md:gap-4">
+        <div className="absolute bottom-5 left-5 right-5 z-10">
+          <div className="flex items-center gap-3 w-full">
             <div
               className={`w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md flex-shrink-0 flex items-center justify-center border border-white/20 ${badgeTextClass} shadow-lg`}
             >
               <span className="material-symbols-outlined text-[20px]">{icon}</span>
             </div>
-            <h3 className="text-xl md:text-3xl font-black text-white group-hover:text-primary-container transition-colors leading-tight drop-shadow-md">
+            <h3 className="text-lg lg:text-xl font-bold text-white group-hover:text-primary-container transition-colors leading-tight tracking-tight drop-shadow-md flex-1">
               {title}
             </h3>
           </div>
@@ -75,12 +75,14 @@ export function ProjectCard({
       </div>
 
       {/* CONTENU COMPACT EN DESSOUS */}
-      <div className="p-6 md:p-8 flex flex-col flex-grow bg-surface-container">
+      <div className="p-5 md:p-6 flex flex-col flex-grow bg-surface-container">
         {/* SUBTITLE */}
-        <p className="text-sm text-slate-300 font-medium mb-6 leading-snug">{subtitle}</p>
+        {subtitle && (
+          <p className="text-sm text-slate-300 font-medium mb-4 leading-snug">{subtitle}</p>
+        )}
 
         {/* BLOCS PROBLEME / SOLUTION / IMPACT */}
-        <div className="space-y-4 mb-8 flex-grow">
+        <div className="space-y-4 mb-6 flex-grow">
           <div>
             <div className="text-[10px] uppercase font-black text-slate-500 mb-1 tracking-widest">
               Problem
@@ -95,7 +97,7 @@ export function ProjectCard({
             <p className="text-sm text-slate-300">{solution}</p>
           </div>
 
-          <div className="mt-5 bg-secondary/10 px-4 py-3 rounded-xl border border-secondary/20 block">
+          <div className="bg-secondary/10 px-4 py-3 rounded-xl border border-secondary/20 block">
             <div className="text-[10px] uppercase font-black text-secondary tracking-widest leading-none mb-1 flex items-center gap-1.5 text-glow-orange">
               <span className="text-sm leading-none">💥</span>
               {impactLabel}
