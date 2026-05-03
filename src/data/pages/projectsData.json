@@ -181,6 +181,42 @@
       "impactValue": "Sensibilisation et sécurité IA"
     }
   ],
+  "scientificProjects": [
+    {
+      "category": "Bio-inspiré / Santé",
+      "title": "Kernel biomimétique de gouvernance IA",
+      "staticAlt": "Système biomimétique TAYIER CORE KERNEL",
+      "hoverAlt": "Architecture biomimétique de gouvernance IA",
+      "staticImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGcKUfeZUEGLGLu1XjG-jbzy6ApPypt5wqViMrpJemjGLTfZAbbOPUgQGhI2WHaQ9OTgZKzXPRaYavOBPq9tNWRu11rWkW8CNSh84Z3Av5NCIXmEy8WhhbLKYClGznQx57eDg7-bXtOuACF3Rf8rUi-E9I_Xvr_aehr_MAS4wLeOWmvuUQEqmGSBJp3IT0tCeU8d5C2Ddqx68_0ulIws850ar5mIBYWDzmFYsMjw0fQeBNWVU8SLHBt4KkYvfasA96nJ13W-X0AH8",
+      "hoverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuD42SabWUeHhpTO1cSFRfi1Myvavqq9B9pf49ZHmIlaoPOAd6pN6A_-b6t5ZFnnF0NEhHqMG2qhYbUc2WA1ZlYgp8PqePzSZ1mx7ODJu7CZqm8VK8J4leTWttFlCtgShnz0gNTEWH5NzD6Qs_ddfxKGWqgyE3bSSGXlKZbQ544vAnAT_DebQd2GTY8teWTqEFmdSKf8kpJc5ahEwxndHRsksdZEa5oVOAWEueUyeytosUrhr1P02hrmw_ImeNnOErIDOnxbEtLVABU",
+      "icon": "neurology",
+      "badgeBgClass": "bg-primary-container/20",
+      "badgeTextClass": "text-primary-container",
+      "badgeBorderClass": "border-primary-container/30",
+      "subtitle": "Architecture biomimétique pensée pour la santé, la sécurité et la gouvernance.",
+      "problem": "Les systèmes IA deviennent difficiles à contrôler quand ils manquent de règles stables.",
+      "solution": "Un noyau, des membranes et une logique de gouvernance pour cadrer les flux sensibles.",
+      "impactLabel": "Impact",
+      "impactValue": "Rigueur, contrôle, auditabilité"
+    },
+    {
+      "category": "Data / Architecture",
+      "title": "Écosystème Python fullstack et data",
+      "staticAlt": "Architecture Python et data",
+      "hoverAlt": "Architecture logicielle industrielle",
+      "staticImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGcKUfeZUEGLGLu1XjG-jbzy6ApPypt5wqViMrpJemjGLTfZAbbOPUgQGhI2WHaQ9OTgZKzXPRaYavOBPq9tNWRu11rWkW8CNSh84Z3Av5NCIXmEy8WhhbLKYClGznQx57eDg7-bXtOuACF3Rf8rUi-E9I_Xvr_aehr_MAS4wLeOWmvuUQEqmGSBJp3IT0tCeU8d5C2Ddqx68_0ulIws850ar5mIBYWDzmFYsMjw0fQeBNWVU8SLHBt4KkYvfasA96nJ13W-X0AH8",
+      "hoverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuD42SabWUeHhpTO1cSFRfi1Myvavqq9B9pf49ZHmIlaoPOAd6pN6A_-b6t5ZFnnF0NEhHqMG2qhYbUc2WA1ZlYgp8PqePzSZ1mx7ODJu7CZqm8VK8J4leTWttFlCtgShnz0gNTEWH5NzD6Qs_ddfxKGWqgyE3bSSGXlKZbQ544vAnAT_DebQd2GTY8teWTqEFmdSKf8kpJc5ahEwxndHRsksdZEa5oVOAWEueUyeytosUrhr1P02hrmw_ImeNnOErIDOnxbEtLVABU",
+      "icon": "schema",
+      "badgeBgClass": "bg-secondary/20",
+      "badgeTextClass": "text-secondary",
+      "badgeBorderClass": "border-secondary/30",
+      "subtitle": "Base technique pour orchestrer web, data et bureau.",
+      "problem": "Besoin d’une base solide pour orchestrer plusieurs couches logicielles.",
+      "solution": "Django, data pipeline, templates et launcher desktop réunis.",
+      "impactLabel": "Impact",
+      "impactValue": "Architecture complète et crédible"
+    }
+  ],
   "methodTitle": "Ma méthode",
   "methodSubtitle": "Un processus simple pour transformer un besoin réel en solution utile et visible.",
   "ctaTitle": "Prêt à transformer une idée en solution ?",

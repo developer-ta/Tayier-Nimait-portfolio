@@ -141,6 +141,44 @@ export function ProjectsPage() {
         </div>
       </section>
 
+      {projectsData.scientificProjects.length > 0 && (
+        <section className="mb-24">
+          <div className="flex items-end justify-between gap-6 mb-10">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-on-background">
+                Axe scientifique / bio-inspiré
+              </h2>
+              <p className="text-on-surface-variant mt-2">
+                Des projets qui montrent la rigueur, le contrôle et la sensibilité aux contextes
+                santé, scientifique et biomimétique.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {projectsData.scientificProjects.map((card) => (
+              <ProjectDetailCard
+                key={card.title}
+                category={card.category}
+                title={card.title}
+                staticImage={card.staticImage}
+                hoverImage={card.hoverImage}
+                staticAlt={card.staticAlt}
+                hoverAlt={card.hoverAlt}
+                icon={card.icon}
+                badgeBgClass={card.badgeBgClass}
+                badgeTextClass={card.badgeTextClass}
+                badgeBorderClass={card.badgeBorderClass}
+                subtitle={card.subtitle}
+                problem={card.problem}
+                solution={card.solution}
+                impactLabel={card.impactLabel}
+                impactValue={card.impactValue}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
       {projectsData.bonusProjects.length > 0 && (
         <section className="mb-12">
           <div className="flex items-end justify-between gap-6 mb-10">
