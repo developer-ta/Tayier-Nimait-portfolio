@@ -1,5 +1,7 @@
 import { homeData } from '../data/pages/homeData';
 import { projectsData } from '../data/pages/projectsData';
+import { ActiveProjectCard } from '../components/ActiveProjectCard';
+import { HomeProjectCard } from '../components/HomeProjectCard';
 import { ProjectDetailCard } from '../components/ProjectDetailCard';
 import { MethodCard } from '../components/MethodCard';
 import { SEO } from '../components/SEO';
@@ -40,64 +42,140 @@ export function ProjectsPage() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {homeData.projects.map((card) => (
-          <ProjectDetailCard
-            key={card.title}
-            category={card.category}
-            title={card.title}
-            staticImage={card.staticImage}
-            hoverImage={card.hoverImage}
-            staticAlt={card.staticAlt}
-            hoverAlt={card.hoverAlt}
-            icon={card.icon}
-            badgeBgClass={card.badgeBgClass}
-            badgeTextClass={card.badgeTextClass}
-            badgeBorderClass={card.badgeBorderClass}
-            subtitle={(card as any).subtitle || ''}
-            problem={card.problem}
-            solution={card.solution}
-            impactLabel={card.impactLabel}
-            impactValue={card.impactValue}
-          />
-        ))}
-      </div>
-
-      <div className="morph-outset bg-gradient-to-r from-surface-container-low to-surface-container-high rounded-[2rem] p-12 border border-white/5 relative overflow-hidden mt-12">
-        <div className="absolute top-0 right-0 p-8">
-          <span className="flex items-center gap-2 bg-primary-container text-on-primary-container px-4 py-2 rounded-full text-xs font-black animate-pulse">
-            <span className="w-2 h-2 rounded-full bg-white" />
-            {projectsData.ongoing.status}
-          </span>
-        </div>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="mb-24">
+        <div className="flex items-end justify-between gap-6 mb-10">
           <div>
-            <h3 className="text-4xl font-black mb-6 italic">{projectsData.ongoing.title}</h3>
-            <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
-              {projectsData.ongoing.description}
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-on-background">
+              Projets prioritaires
+            </h2>
+            <p className="text-on-surface-variant mt-2">
+              Les projets les plus cohérents avec l’alternance, le freelance et les opportunités
+              entreprise.
             </p>
-            <div className="flex gap-4">
-              {projectsData.ongoing.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-4 py-2 bg-surface-container-highest rounded-lg text-sm font-bold"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="morph-inset bg-surface-container-lowest rounded-2xl p-6 border border-white/5">
-            <div className="flex items-center justify-between mb-4">
-              <span className="font-bold text-secondary">{projectsData.ongoing.progressLabel}</span>
-              <span className="font-bold">{projectsData.ongoing.progressValue}</span>
-            </div>
-            <div className="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
-              <div className="h-full bg-gradient-to-r from-secondary to-primary-container w-[85%] rounded-full shadow-[0_0_10px_rgba(6,182,212,0.5)]" />
-            </div>
           </div>
         </div>
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {projectsData.featuredProjects.map((card) => (
+            <ProjectDetailCard
+              key={card.title}
+              category={card.category}
+              title={card.title}
+              staticImage={card.staticImage}
+              hoverImage={card.hoverImage}
+              staticAlt={card.staticAlt}
+              hoverAlt={card.hoverAlt}
+              icon={card.icon}
+              badgeBgClass={card.badgeBgClass}
+              badgeTextClass={card.badgeTextClass}
+              badgeBorderClass={card.badgeBorderClass}
+              subtitle={card.subtitle}
+              problem={card.problem}
+              solution={card.solution}
+              impactLabel={card.impactLabel}
+              impactValue={card.impactValue}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-24">
+        <div className="flex items-end justify-between gap-6 mb-10">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-on-background">
+              Projet en cours
+            </h2>
+            <p className="text-on-surface-variant mt-2">
+              Le bloc qui montre l’architecture et la capacité à faire évoluer une base technique.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-10 max-w-2xl">
+          <ActiveProjectCard
+            status={projectsData.activeProject.status ?? 'Version active'}
+            statusColor={projectsData.activeProject.statusColor ?? 'orange'}
+            title={projectsData.activeProject.title}
+            staticImage={projectsData.activeProject.staticImage}
+            hoverImage={projectsData.activeProject.hoverImage}
+            staticAlt={projectsData.activeProject.staticAlt}
+            hoverAlt={projectsData.activeProject.hoverAlt}
+            icon={projectsData.activeProject.icon}
+            problem={projectsData.activeProject.problem}
+            currentSolution={projectsData.activeProject.currentSolution ?? ''}
+            currentImpact={projectsData.activeProject.currentImpact ?? ''}
+            nextStep={projectsData.activeProject.nextStep ?? ''}
+          />
+        </div>
+      </section>
+
+      <section className="mb-24">
+        <div className="flex items-end justify-between gap-6 mb-10">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-on-background">
+              Autres vitrines
+            </h2>
+            <p className="text-on-surface-variant mt-2">
+              Des projets publics supplémentaires pour montrer la polyvalence et la diversité des
+              contextes.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {projectsData.secondaryProjects.map((card) => (
+            <HomeProjectCard
+              key={card.title}
+              category={card.category}
+              title={card.title}
+              staticImage={card.staticImage}
+              hoverImage={card.hoverImage}
+              staticAlt={card.staticAlt}
+              hoverAlt={card.hoverAlt}
+              icon={card.icon}
+              badgeBgClass={card.badgeBgClass}
+              badgeTextClass={card.badgeTextClass}
+              badgeBorderClass={card.badgeBorderClass}
+              subtitle={card.subtitle}
+              impactLabel={card.impactLabel}
+              impactValue={card.impactValue}
+            />
+          ))}
+        </div>
+      </section>
+
+      {projectsData.bonusProjects.length > 0 && (
+        <section className="mb-12">
+          <div className="flex items-end justify-between gap-6 mb-10">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-on-background">
+                Bonus sécurité IA
+              </h2>
+              <p className="text-on-surface-variant mt-2">
+                Un bloc utile pour montrer la capacité à travailler aussi sur la robustesse et la
+                défense des systèmes IA.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-2xl">
+            {projectsData.bonusProjects.map((card) => (
+              <HomeProjectCard
+                key={card.title}
+                category={card.category}
+                title={card.title}
+                staticImage={card.staticImage}
+                hoverImage={card.hoverImage}
+                staticAlt={card.staticAlt}
+                hoverAlt={card.hoverAlt}
+                icon={card.icon}
+                badgeBgClass={card.badgeBgClass}
+                badgeTextClass={card.badgeTextClass}
+                badgeBorderClass={card.badgeBorderClass}
+                subtitle={card.subtitle}
+                impactLabel={card.impactLabel}
+                impactValue={card.impactValue}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mt-40 mb-32">
         <div className="text-center mb-20">

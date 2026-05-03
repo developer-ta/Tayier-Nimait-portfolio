@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "title": "Tayier NIMAIT | Développeur IA appliquée",
+    "description": "Développeur IA appliquée orienté Python, React et automatisation métier. Je transforme des besoins réels en outils utiles et exploitables."
+  },
+  "eyebrow": "Pour alternance, mission et opportunités entreprise",
+  "headlineBefore": "Je construis des",
+  "highlighted": "solutions utiles",
+  "headlineAfter": "avec Python et IA",
+  "description": "J'aide les équipes à transformer leurs besoins métiers en produits simples, fiables et visibles publiquement.",
+  "primaryAction": "Voir les projets prioritaires",
+  "secondaryAction": "Discuter de votre projet",
+  "heroImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuApmRGCoKbhSiin_WC57UxXcPr-Fz48b_sj86jUZNbJ7reLRcNJBGmGLj4HCmXjBywOcJI2SFz88hsbb0jKYLQ7Wxn1LCJQDiqqXFG5McGF9Tct4X0le1RweWtYGyPDYn4P4wFoW0-xF_r3gvMMUbGhsOshj4QmmnBIGSdIZBVEjEcyh0b1Qwftw-WsOWG6FDEyFcM62qGQHAWpBL-vp6Txa5MqvtcR7Ysg85C-7dCxZY2JBCNvQIzzWOHca2X1Cx8nEncaoJMuj-M",
+  "metricOneLabel": "Projets publics",
+  "metricOneValue": "6+",
+  "metricTwoLabel": "Axes forts",
+  "metricTwoValue": "IA + Fullstack",
+  "featuredTitle": "Projets Sélectionnés",
+  "projects": [
+    {
+      "category": "Automatisation",
+      "title": "Agent IA de facturation pour PME",
+      "staticAlt": "Interface facturation automatisee",
+      "hoverAlt": "Workflow de facturation automatisee",
+      "staticImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuArzFoyNBfMPO_vS_wyeFLTWToj-hgttJmSTZXcEeyxF-cn2e7b65VHCpaR0b6bvSFNZ1_mLSSZIxYLLGIDPGGtxd_LWHM_XPDz6xylXHgsW2FtUwI-qnaLiVMLimz7kVRD61AY2_c12muYQxo7Hv_8zIuGEJsq8i8-nIYxOKThs3iuYZZ0YPCL-n7ibhahGRrd0NGl9iqaOLlZ73bzx-zTlkMYnI9ozWOI8NtrRyKUH8jIUyPzg3k524t_Du-uZxh22_JilnvZd5Y",
+      "hoverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_qjwherj_qH5b9JHpi2vvW-sCMpEUj7Efe4YmgsiTFuaFThJa2tC8jXmrsgjc1tFzSrU4icbS0QXJMCwYsVZGJz9msDB4WLWXKpSK_ievj7xOkxyp9SZLkk631wrajbXljiL2xenIEtoM4dEYUNaMlju_z2cvaqd2HPXqNa809__cldE53hogOyHlOWOFkmqP7nnHNuEmZNLMBF9eEwouKnKbf3NI2StymlnqR-jL2Wk24-3aS_94JamzzKcqgZBLtkVFOOu8jZQ",
+      "icon": "receipt_long",
+      "badgeBgClass": "bg-orange-500/20",
+      "badgeTextClass": "text-orange-400",
+      "badgeBorderClass": "border-orange-500/30",
+      "subtitle": "Automatisation des tâches métier en langage naturel.",
+      "problem": "Les équipes perdaient du temps sur des saisies et contrôles manuels.",
+      "solution": "Orchestration de la facturation via langage naturel, API et workflows traçables.",
+      "impactLabel": "Impact",
+      "impactValue": "Moins de saisie, plus de contrôle",
+      "status": "Vitrine prioritaire",
+      "statusColor": "green"
+    },
+    {
+      "category": "Agent IA",
+      "title": "Agent de structuration de dialogues",
+      "staticAlt": "Agent de dialogue structurant le contenu",
+      "hoverAlt": "Pipeline de structuration de dialogue",
+      "staticImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBMqdQMiB7nxBaUbzge2DhlpPFYRZSMlJbcVfkwST7pBdCK-HovJqygJtajaUKBJ4CavYnenpuf4amcZoYh0bCaFUnXQdTYlGEHZNfGpFAdpKC9uFJW4foOcEUtoKZ8gjLDQhJt4GK0aXlwf8TJvkHvLiD7iES-0elOAfsJYjmgyb29-KT-SmagiKjX78ndxKhCz5CHyCPzy6NKSd1wYXuq_FtDEDLbV4YBYk07zU5cC-K2lI5XJ4sXFKEIVftqdxUCptBiBmc-UZc",
+      "hoverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuD42SabWUeHhpTO1cSFRfi1Myvavqq9B9pf49ZHmIlaoPOAd6pN6A_-b6t5ZFnnF0NEhHqMG2qhYbUc2WA1ZlYgp8PqePzSZ1mx7ODJu7CZqm8VK8J4leTWttFlCtgShnz0gNTEWH5NzD6Qs_ddfxKGWqgyE3bSSGXlKZbQ544vAnAT_DebQd2GTY8teWTqEFmdSKf8kpJc5ahEwxndHRsksdZEa5oVOAWEueUyeytosUrhr1P02hrmw_ImeNnOErIDOnxbEtLVABU",
+      "icon": "forum",
+      "badgeBgClass": "bg-secondary/20",
+      "badgeTextClass": "text-secondary",
+      "badgeBorderClass": "border-secondary/30",
+      "subtitle": "Transformation de dialogues bruts en briques de projet exploitables.",
+      "problem": "Les dialogues bruts étaient difficiles à transformer en livrables.",
+      "solution": "Découpage, extraction et génération de fichiers d’analyse à chaque étape.",
+      "impactLabel": "Impact",
+      "impactValue": "Analyse plus rapide et structurée",
+      "status": "Prototype actif",
+      "statusColor": "blue"
+    },
+    {
+      "category": "Vitrine publique",
+      "title": "Vitrine publique d’un workflow IA",
+      "staticAlt": "Vitrine publique Solena",
+      "hoverAlt": "Workflow de développement assisté par IA",
+      "staticImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGcKUfeZUEGLGLu1XjG-jbzy6ApPypt5wqViMrpJemjGLTfZAbbOPUgQGhI2WHaQ9OTgZKzXPRaYavOBPq9tNWRu11rWkW8CNSh84Z3Av5NCIXmEy8WhhbLKYClGznQx57eDg7-bXtOuACF3Rf8rUi-E9I_Xvr_aehr_MAS4wLeOWmvuUQEqmGSBJp3IT0tCeU8d5C2Ddqx68_0ulIws850ar5mIBYWDzmFYsMjw0fQeBNWVU8SLHBt4KkYvfasA96nJ13W-X0AH8",
+      "hoverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuDTjgJIvhZcv5ZDjNr_C0Jss5m_G7ZBav7EqhOvipX_AmmBIMY-CkNIRHP4VqSObXoQUC3zR9bHfWg9yGg-kG56pZJuaEDrzEID2i5oKgFu1RoYA2qs7Vl_H7xJWaCztFjz4EkrLIbLzSIesprUPSEVfdP0Ul0ieSQ_a6CmzJk3qzX_RDWLEGAQ2tEnhTWKjcOVUa54zBCoyhghoMhPU3Tb0Q0VKEgnp-ODwVCmYJRzdbcpaDcwI5_JZIolBXnNFu0JbkCGitjZKrQ",
+      "icon": "visibility",
+      "badgeBgClass": "bg-tertiary/20",
+      "badgeTextClass": "text-tertiary",
+      "badgeBorderClass": "border-tertiary/30",
+      "subtitle": "Développement assisté par IA, split public / privé.",
+      "problem": "Le travail interne restait invisible et difficile à présenter au public.",
+      "solution": "Un repo public propre, un desktop MVP et un split clair entre vitrine et noyau privé.",
+      "impactLabel": "Impact",
+      "impactValue": "Méthode claire et partageable",
+      "status": "Version active",
+      "statusColor": "blue"
+    }
+  ],
+  "activeProjects": [
+    {
+      "status": "Architecture validée",
+      "statusColor": "orange",
+      "category": "Architecture",
+      "title": "Écosystème Python fullstack et data",
+      "staticAlt": "Architecture Python et data",
+      "hoverAlt": "Architecture logicielle industrielle",
+      "staticImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGcKUfeZUEGLGLu1XjG-jbzy6ApPypt5wqViMrpJemjGLTfZAbbOPUgQGhI2WHaQ9OTgZKzXPRaYavOBPq9tNWRu11rWkW8CNSh84Z3Av5NCIXmEy8WhhbLKYClGznQx57eDg7-bXtOuACF3Rf8rUi-E9I_Xvr_aehr_MAS4wLeOWmvuUQEqmGSBJp3IT0tCeU8d5C2Ddqx68_0ulIws850ar5mIBYWDzmFYsMjw0fQeBNWVU8SLHBt4KkYvfasA96nJ13W-X0AH8",
+      "hoverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuD42SabWUeHhpTO1cSFRfi1Myvavqq9B9pf49ZHmIlaoPOAd6pN6A_-b6t5ZFnnF0NEhHqMG2qhYbUc2WA1ZlYgp8PqePzSZ1mx7ODJu7CZqm8VK8J4leTWttFlCtgShnz0gNTEWH5NzD6Qs_ddfxKGWqgyE3bSSGXlKZbQ544vAnAT_DebQd2GTY8teWTqEFmdSKf8kpJc5ahEwxndHRsksdZEa5oVOAWEueUyeytosUrhr1P02hrmw_ImeNnOErIDOnxbEtLVABU",
+      "icon": "schema",
+      "problem": "Besoin d’une base solide pour orchestrer web, data et bureau.",
+      "currentSolution": "Django, data pipeline, templates et launcher desktop réunis.",
+      "currentImpact": "Architecture validée",
+      "nextStep": "Sélectionner les blocs publics à afficher"
+    }
+  ],
+  "methodTitle": "Ma Méthode",
+  "methodSubtitle": "Un processus simple pour transformer un besoin réel en solution utile et visible.",
+  "methodSteps": [
+    {
+      "number": "01",
+      "title": "Analyse",
+      "icon": "search",
+      "iconClass": "text-primary-container",
+      "offsetClass": "",
+      "description": "Audit de vos processus actuels et identification des points de friction automatisables."
+    },
+    {
+      "number": "02",
+      "title": "Conception",
+      "icon": "architecture",
+      "iconClass": "text-secondary",
+      "offsetClass": "md:mt-12",
+      "description": "Architecture technique, choix de la stack et design de l'expérience utilisateur."
+    },
+    {
+      "number": "03",
+      "title": "Implémentation",
+      "icon": "code",
+      "iconClass": "text-tertiary",
+      "offsetClass": "",
+      "description": "Développement agile avec des itérations rapides et tests en environnement réel."
+    },
+    {
+      "number": "04",
+      "title": "Production",
+      "icon": "rocket_launch",
+      "iconClass": "text-primary-container",
+      "offsetClass": "md:mt-12",
+      "description": "Déploiement final, formation des équipes et maintenance évolutive."
+    }
+  ],
+  "ctaTitle": "Prêt à automatiser plus vite ?",
+  "ctaDescription": "Discutons de votre projet et voyons comment le transformer en outil clair, utile et crédible.",
+  "ctaPrimary": "Réserver un appel",
+  "ctaSecondary": "Envoyer un message"
+}
